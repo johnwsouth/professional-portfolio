@@ -120,7 +120,7 @@ a:focus {
 }
 .intro {
   display: table;
-  width: 100%;
+  width: 100vmin;
   height: auto;
   padding: 100px 0;
   text-align: center;
@@ -219,13 +219,11 @@ a:focus {
     transform: scale(1);
   }
 }
-.content-section {
-  padding-top: 100px;
-}
+
 .download-section {
   width: 100%;
-  padding: 50px 0;
   color: white;
+  margin-bottom:30vmin;
   background: url(../img/grayscaletiger.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
@@ -234,9 +232,7 @@ a:focus {
   -o-background-size: cover;
 }
 
-div.download-section-text{
-  padding-bottom: 50vmin;
-}
+
 
 #contact {
   background-image: url(../img/graywolf.jpg) ;
@@ -247,12 +243,11 @@ div.download-section-text{
   background-repeat: no-repeat;
   background-position-y: -50vmin;
   background-position-x: center;
-  margin-top: 20vmin;
   width: 100%;
 }
 
 .contact-button-section{
-  padding-top: 40vmin;
+  margin-top: 40vmin;
   color: white;
 }
 
@@ -316,11 +311,6 @@ ul.banner-social-buttons {
   ul.banner-social-buttons li:last-child {
     margin-bottom: 0;
   }
-}
-
-.contact-button-section{
-  padding-top: 60vmin;
-  color: white;
 }
 
 footer {
