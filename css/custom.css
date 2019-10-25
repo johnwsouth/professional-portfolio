@@ -10,10 +10,12 @@
 .book-master-link:hover{
   background-image: url(../img/book-master.gif);
   height: 80vmin;
-  background-size: 60vmin;
+  background-size: 80vmin;
 
   left: 55vmin;
+  transition: ease-in-out;
   -webkit-transition: ease-in-out;
+  transition-duration: 2000ms;
   -webkit-transition-duration: 2000ms;
 
 }
@@ -26,6 +28,8 @@
 
   .book-master-link:hover{
     left: 30vmin;
+    background-size: 60vmin;
+
   }
 
   div.download-section-text{
