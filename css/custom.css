@@ -17,3 +17,18 @@
   -webkit-transition-duration: 2000ms;
 
 }
+
+@media (max-width: 767px) {
+  .book-master-link {
+    left: 50vmin;
+    background-size: 20vmin;
+  }
+
+  .book-master-link:hover{
+    left: 30vmin;
+  }
+
+  div.download-section-text{
+  padding-bottom: 100vmin;
+}
+}
