@@ -233,6 +233,10 @@ a:focus {
   -o-background-size: cover;
 }
 
+div.download-section-text{
+  padding-bottom: 50vmin;
+}
+
 #contact {
   background-image: url(../img/graywolf.jpg) ;
   -webkit-background-size: cover;
