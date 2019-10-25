@@ -13,9 +13,17 @@ function collapseNavbar() {
     }
 }
 
+
 $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
 
+
+var bookMasterDiv = $('img.book-master-link');
+bookMasterDiv.on('hover', switchToBookMasterGif);
+
+function switchToBookMasterGif(){
+    bookMasterDiv.attr('src','../img/book-master.gif');
+}
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
