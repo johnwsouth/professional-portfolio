@@ -225,7 +225,7 @@ a:focus {
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+  background: url(../img/grayscaletiger.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -234,21 +234,26 @@ a:focus {
 }
 
 #contact {
-  background-image: url(../img/graywolf.jpg);
+  background-image: url(../img/graywolf.jpg) ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
+  -o-background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -50vmin;
+  background-position-x: center;
   margin-top: 20vmin;
   width: 100%;
 }
 
 .contact-button-section{
-  margin-top: 40vmin;
+  padding-top: 40vmin;
   color: white;
 }
 
-.contact-button{
-
+a.contact-button{
+  color: white ;
+  border-color: white;
 }
 
 #map {
@@ -307,6 +312,12 @@ ul.banner-social-buttons {
     margin-bottom: 0;
   }
 }
+
+.contact-button-section{
+  padding-top: 60vmin;
+  color: white;
+}
+
 footer {
   padding: 50px 0;
 }
