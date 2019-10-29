@@ -10,6 +10,12 @@ export default class Head extends React.Component{
       headState = this.appContext.headState;
     }
   }
+
+  render(){
+    return(
+      <div>I am the Head</div>
+    )
+  }
 }
 
 Head.contextType = AppContext;
