@@ -1,20 +1,19 @@
 import React from 'react';
 import AppContext from '../context';
 
-
-export default class Head extends React.Component{
-  constructor(props){
+export default class Head extends React.Component {
+  constructor(props) {
     super(props);
 
     this.state = {
-      headState = this.appContext.headState;
-    }
+      headState: this.appContext.headState
+    };
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div>I am the Head</div>
-    )
+    );
   }
 }
 

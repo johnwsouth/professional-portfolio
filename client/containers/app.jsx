@@ -1,17 +1,16 @@
 import React from 'react';
 import AppContext from '../context';
+import Head from '../components/head';
 
-
-
-class App extends React.Component{
-  constructor(props){
+export default class App extends React.Component {
+  constructor(props) {
     super(props);
-    this.state={
-      headState = 'unopened';
-    }
+    this.state = {
+      headState: 'unopened'
+    };
   }
 
-  render(){
+  render() {
     var appContext = {
       entries: this.state.entries,
       getAllEntries: this.getAllEntries,
@@ -20,6 +19,14 @@ class App extends React.Component{
       currentTable: this.state.currentTable,
       getDaySales: this.getDaySales
     };
+
+    return (
+      <AppContext.Provider value={appContext}>
+        <Head />
+      </AppContext.Provider>
+    );
   }
 
 }
+
+App.contextType = AppContext;
