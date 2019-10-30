@@ -6,7 +6,7 @@ export default class Head extends React.Component {
     super(props);
 
     this.state = {
-      headState: this.appContext.headState
+      headState: null
     };
   }
 
