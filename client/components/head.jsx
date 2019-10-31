@@ -19,7 +19,7 @@ export default class Head extends React.Component {
     if (this.state.headClicked === false) {
       return (
         <>
-        <div className = 'head ' onClick = {this.handleClick}></div>
+        <div className = 'head' onClick = {this.handleClick}></div>
         <div className = 'firework-head firework-initial'></div>
         </>
       );

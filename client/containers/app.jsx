@@ -1,6 +1,8 @@
 import React from 'react';
 import AppContext from '../context';
 import Head from '../components/head';
+import CardContainer from '../containers/card-container';
+import Card from '../components/card';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -23,6 +25,10 @@ export default class App extends React.Component {
     return (
       <AppContext.Provider value={appContext}>
         <Head />
+        <CardContainer>
+          <Card />
+        </CardContainer>
+
       </AppContext.Provider>
     );
   }
