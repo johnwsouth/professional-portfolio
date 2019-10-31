@@ -22,14 +22,14 @@ export default class Head extends React.Component {
         <>
         <div className = 'head' onClick = {this.handleClick}></div>
         <div className = 'head head-bg'></div>
-        <div className = 'firework-head firework-initial'></div>
+        {/* <div className = 'firework-head firework-initial'></div> */}
         </>
       );
     } else {
       return (
         <>
         <div className='head'></div>
-        <div className='firework-head firework-clicked'></div>
+        {/* <div className='firework-head firework-clicked'></div> */}
         </>
       );
     }
