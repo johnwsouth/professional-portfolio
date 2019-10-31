@@ -6,17 +6,17 @@ export default class Head extends React.Component {
     super(props);
 
     this.state = {
-      headState: 'initial'
+      headClicked: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.setState({ headState: 'isClicked' });
+    this.setState({ headClicked: !this.state.headClicked });
   }
 
   render() {
-    if (this.state.headState === 'initial') {
+    if (this.state.headClicked === false) {
       return (
         <>
         <div className = 'head ' onClick = {this.handleClick}></div>
