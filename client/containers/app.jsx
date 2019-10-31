@@ -2,34 +2,48 @@ import React from 'react';
 import AppContext from '../context';
 import Head from '../components/head';
 import CardContainer from '../containers/card-container';
-import Card from '../components/card';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      headState: 'unopened'
+      headClicked: false
     };
+    this.renderSelector = this.renderSelector.bind(this);
+    this.flipHeadState = this.flipHeadState.bind(this);
+  }
+
+  flipHeadState() {
+    this.setState({ headClicked: !this.state.headClicked });
+  }
+
+  renderSelector() {
+    if (this.state.headClicked === false) {
+      return (
+        <Head />
+      );
+    } else {
+      return (
+          <>
+          <Head />
+          <CardContainer />
+          </>
+      );
+    }
   }
 
   render() {
     var appContext = {
-      entries: this.state.entries,
-      getAllEntries: this.getAllEntries,
-      getTodaysEntries: this.getTodaysEntries,
-      setCurrentTable: this.setCurrentTable,
-      currentTable: this.state.currentTable,
-      getDaySales: this.getDaySales
+      flipHeadState: this.flipHeadState
     };
+
+    var returnedComponents = this.renderSelector();
 
     return (
       <AppContext.Provider value={appContext}>
-        <Head />
-        <CardContainer>
-          <Card />
-        </CardContainer>
-
+        {returnedComponents}
       </AppContext.Provider>
+
     );
   }
 

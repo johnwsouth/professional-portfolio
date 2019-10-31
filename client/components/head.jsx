@@ -12,6 +12,7 @@ export default class Head extends React.Component {
   }
 
   handleClick() {
+    this.context.flipHeadState();
     this.setState({ headClicked: !this.state.headClicked });
   }
 
@@ -20,6 +21,7 @@ export default class Head extends React.Component {
       return (
         <>
         <div className = 'head' onClick = {this.handleClick}></div>
+        <div className = 'head head-bg'></div>
         <div className = 'firework-head firework-initial'></div>
         </>
       );
