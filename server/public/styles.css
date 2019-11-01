@@ -66,11 +66,9 @@ body{
   height: 40%;
   width: 13%;
   z-index: 2;
-  animation: move 5s;
+  animation: move 10s forwards;
   display: inline-block;
-
-
-
+  margin: 10vmin;
 }
 
 @keyframes move {
@@ -79,8 +77,8 @@ body{
   }
 
   /* Finish changes by here */
-  20% {
-    transform: translate(-600px, 0);
+  50% {
+    transform: translate(-300px, 0);
   }
 
   /* Between 20% and 100%, nothing changes */

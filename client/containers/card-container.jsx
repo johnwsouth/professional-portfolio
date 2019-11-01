@@ -5,6 +5,7 @@ export default function CardContainer(props) {
   return (
     <div className='card-container'>
       <Card />
+      <Card />
     </div>
   );
 }
