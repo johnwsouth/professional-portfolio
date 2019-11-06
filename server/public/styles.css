@@ -66,9 +66,8 @@ body{
   height: 40%;
   width: 13%;
   z-index: 2;
-  animation: move 10s forwards;
   display: inline-block;
-  margin: 10vmin;
+  margin: 2vmin;
 }
 
 @keyframes move {
