@@ -58,7 +58,6 @@ body{
   background-color: white;
   position: absolute;
   display: flex;
-  justify-content: center;
 }
 
 .card{
