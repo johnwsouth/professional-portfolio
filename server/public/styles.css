@@ -26,12 +26,12 @@ body{
 
 .head {
   height: 80vmin;
-  width : 60vmin;
-  background-image: url('./images/head-initial.png');
-  z-index: 2;
-  background-size: contain;
+  width : 80vmin;
+  z-index: 4;
+  background-size: 500% contain;
   background-repeat: no-repeat;
   background-position-y: center;
+  background-position-x: center;
   display: inline-block;
 }
 
@@ -57,11 +57,37 @@ body{
   width: 95%;
   background-color: white;
   position: absolute;
+  display: flex;
 }
 
 .card{
   background-color: black;
-  height: 20%;
-  width: 10%;
+  background-image: url('./images/bookMaster.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: move 4s linear;
+  animation-delay: 5000ms;
+  background-position: center;
+  height: 40%;
+  width: 13%;
   z-index: 2;
+  margin: 2vmin;
+  display: inline-block;
+  position: absolute;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(400px, 0) scale(0);
+  }
+
+  /* Finish changes by here */
+  50% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  /* Between 20% and 100%, nothing changes */
+  100% {
+    transform: translate(0, 0);
+  }
 }
