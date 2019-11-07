@@ -27,7 +27,7 @@ body{
 .head {
   height: 80vmin;
   width : 60vmin;
-  z-index: 2;
+  z-index: 4;
   background-size: contain;
   background-repeat: no-repeat;
   background-position-y: center;

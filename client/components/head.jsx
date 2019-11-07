@@ -6,9 +6,15 @@ export default class Head extends React.Component {
     super(props);
 
     this.state = {
-      headClicked: false
+      headClicked: false,
+      headTransitionArray: []
     };
     this.handleClick = this.handleClick.bind(this);
+    this.generateHeadTransition = this.generateHeadTransition.bind(this);
+  }
+
+  componentDidMount() {
+    this.generateHeadTransition();
   }
 
   handleClick() {
@@ -16,14 +22,19 @@ export default class Head extends React.Component {
     this.setState({ headClicked: !this.state.headClicked });
   }
 
-  cycleImages() {
-    for (var index = 1; index < 15; index++) {
-      var headElem = document.querySelector('.head');
-      headElem.attr('background-image', 'url');
+  generateHeadTransition() {
+    var imagesArray = [];
+    for (var i = 1; i < 15; i++) {
+      imagesArray.push('head-open-' + i);
     }
+    var images = imagesArray.map(image => {
+      return (<div className='head' key={image} style={{ backgroundImage: `url('./images/${image}.png')` }}></div>);
+    });
+    this.setState({ headTransitionArray: [images] });
   }
 
   render() {
+
     if (this.state.headClicked === false) {
       return (
         <>
@@ -35,7 +46,8 @@ export default class Head extends React.Component {
     } else {
       return (
         <>
-        <div className='head'></div>
+          <div className='head' style={{ backgroundImage: "url('./images/head-initial.png')" }} onClick={this.handleClick}></div>
+          {/* <div className='head' style={{ backgroundImage: "url('./images/head-initial.png')" }}></div> */}
         {/* <div className='firework-head firework-clicked'></div> */}
         </>
       );
