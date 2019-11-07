@@ -26,11 +26,12 @@ body{
 
 .head {
   height: 80vmin;
-  width : 60vmin;
+  width : 80vmin;
   z-index: 4;
-  background-size: contain;
+  background-size: 500% contain;
   background-repeat: no-repeat;
   background-position-y: center;
+  background-position-x: center;
   display: inline-block;
 }
 
