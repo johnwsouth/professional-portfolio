@@ -62,7 +62,11 @@ body{
 
 .card{
   background-color: black;
+  background-image: url('./images/bookMaster.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   animation: move 4s forwards;
+  background-position: center;
   height: 40%;
   width: 13%;
   z-index: 2;
