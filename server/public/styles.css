@@ -27,7 +27,6 @@ body{
 .head {
   height: 80vmin;
   width : 60vmin;
-  background-image: url('./images/head-initial.png');
   z-index: 2;
   background-size: contain;
   background-repeat: no-repeat;
