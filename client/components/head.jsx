@@ -7,10 +7,15 @@ export default class Head extends React.Component {
 
     this.state = {
       headClicked: false,
+      headDelay: true,
+      currentHead: null,
       headTransitionArray: []
     };
+    this.currentHeadIndex = 1;
+
     this.handleClick = this.handleClick.bind(this);
     this.generateHeadTransition = this.generateHeadTransition.bind(this);
+    this.transitionHeads = this.transitionHeads.bind(this);
   }
 
   componentDidMount() {
@@ -20,6 +25,9 @@ export default class Head extends React.Component {
   handleClick() {
     this.context.flipHeadState();
     this.setState({ headClicked: !this.state.headClicked });
+    setTimeout(() => {
+      this.transitionHeads();
+    }, 2000);
   }
 
   generateHeadTransition() {
@@ -30,7 +38,20 @@ export default class Head extends React.Component {
     var images = imagesArray.map(image => {
       return (<div className='head' key={image} style={{ backgroundImage: `url('./images/${image}.png')` }}></div>);
     });
-    this.setState({ headTransitionArray: [images] });
+
+    this.setState({ headTransitionArray: images });
+  }
+
+  transitionHeads() {
+    this.setState({ headDelay: false });
+    var headTransInterval = setInterval(() => {
+      this.setState({ currentHead: this.state.headTransitionArray[this.currentHeadIndex] });
+      if (this.currentHeadIndex < 15) {
+        this.currentHeadIndex += 1;
+      } else {
+        clearInterval(headTransInterval);
+      }
+    }, 100);
   }
 
   render() {
@@ -46,7 +67,9 @@ export default class Head extends React.Component {
     } else {
       return (
         <>
-          <div className='head' style={{ backgroundImage: "url('./images/head-initial.png')" }} onClick={this.handleClick}></div>
+          {this.state.headDelay === true && <div className='head' style={{ backgroundImage: "url('./images/head-initial.png')" }} onClick={this.handleClick}></div>}
+        {this.currentHeadIndex < 15 ? this.state.currentHead : this.state.headTransitionArray[this.state.headTransitionArray.length - 1]}
+          {/* <div className='head' style={{ backgroundImage: "url('./images/head-initial.png')" }} onClick={this.handleClick}></div> */}
           {/* <div className='head' style={{ backgroundImage: "url('./images/head-initial.png')" }}></div> */}
         {/* <div className='firework-head firework-clicked'></div> */}
         </>
