@@ -2,6 +2,7 @@ import React from 'react';
 import AppContext from '../context';
 import Head from '../components/head';
 import CardContainer from '../containers/card-container';
+import NavBar from '../containers/nav-bar';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -26,6 +27,7 @@ export default class App extends React.Component {
       return (
           <>
           <Head />
+          <NavBar />
           <CardContainer />
           </>
       );

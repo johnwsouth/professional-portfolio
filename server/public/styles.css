@@ -52,6 +52,29 @@ body{
   display: inline-block;
 }
 
+.nav-bar{
+  height: 6vmin;
+  width: 38vmin;
+  font-size: 2vmin;
+  background-color: black;
+  position: absolute;
+  color: white;
+  top: 9vmin;
+  right: 4vmin;
+  line-height: 200%;
+  z-index: 5;
+  text-align: center;
+  animation-duration: 12s;
+  animation-iteration-count: 1;
+  transform-origin: bottom;
+
+}
+
+.nav-link{
+  margin: 2vmin;
+  display: inline-block;
+}
+
 .card-container{
   height: 80%;
   width: 95%;
@@ -64,7 +87,7 @@ body{
   background-color: black;
   background-size: contain;
   background-repeat: no-repeat;
-  animation-duration: 5s;
+  animation-duration: 2s;
   background-position: center;
   height: 30vmin;
   width: 18vmin;
@@ -76,6 +99,13 @@ body{
   position: relative;
   font-family: 'Modak', cursive;
 }
+
+.card:hover{
+  transition-duration: .7s;
+  transform: translate(10px, 10px) scale(1.2);
+}
+
+
 
 .card-static {
   background-color: black;
@@ -102,14 +132,13 @@ body{
   font-size: 9vmin;
   font-family: 'Yeon Sung', cursive;
   animation-duration: 2.2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 2;
   transform-origin: bottom;
 }
 
 @keyframes move {
   0%{transform: translate(50vmin, -3vmin) scale(.1);}
-  50% {transform: translate(0, 0) scale(1);}
-  100% {transform: translate(0, 0);}
+  100% {transform: translate(0, 0) scale(1);}
 }
 .move{
   animation-name: move;
@@ -131,12 +160,38 @@ body{
   animation-timing-function: ease;
 }
 
+.slide-down-nav{
+  animation-name: slide-down-nav;
+  animation-timing-function: ease;
+}
+
+.hover{
+  animation-name: hover;
+}
+
+@media screen and (max-width: 992px) {
+  .nav-bar {
+    height: 30vmin;
+    top: 20vmin;
+    width: 22vmin;
+    right: 0;
+    text-align: center;
+  }
+
+  .card-static {
+    top: 45vmin;
+    left: 45vmin;
+    height: 10%;
+    width: 8%;
+  }
+}
+
 @keyframes bounce-project-title {
   0%   { transform: scale(1,1)      translateY(0); }
   10%  { transform: scale(1.1,.9)   translateY(0); }
-  30%  { transform: scale(.9,1.1)   translateY(-80px); }
+  30%  { transform: scale(.9,1.1)   translateY(-10vmin); }
   50%  { transform: scale(1.05,.95) translateY(0); }
-  57%  { transform: scale(1,1)      translateY(-7px); }
+  57%  { transform: scale(1,1)      translateY(-.7vmin); }
   64%  { transform: scale(1,1)      translateY(0); }
   100% { transform: scale(1,1)      translateY(0); }
 }
@@ -148,7 +203,42 @@ body{
 }
 
 @keyframes slide-down-static{
-  0%{transform: translate(0, -3vh) scale(.1);}
+  0%{transform: translate(0, -3vmin) scale(.1);}
   50% {transform: translate(0, 0) scale(1);}
   100% {transform: translate(0, 0);}
+}
+
+@keyframes slide-down-nav{
+  0%{transform: translate(0, -20vmin) scale(1);}
+  50% {transform: translate(0, 0) scale(1);}
+  100% {transform: translate(0, 0);}
+}
+
+@-webkit-keyframes hover {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hover {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
 }

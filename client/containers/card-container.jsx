@@ -50,10 +50,11 @@ export default class CardContainer extends React.Component {
       );
     } else {
       return (
+        <>
         <div className="card-container">
           <Card cardVisible={false}></Card>
         </div>
-
+        </>
       );
     }
 
