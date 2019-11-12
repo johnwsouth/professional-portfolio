@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Yeon Sung', cursive;
   background-color: black;
   height: 100vh;
   width: 100vw;
@@ -27,7 +27,7 @@ body{
 .head {
   height: 80vmin;
   width : 80vmin;
-  z-index: 4;
+  z-index: 2;
   background-size: 500% contain;
   background-repeat: no-repeat;
   background-position-y: center;
@@ -62,16 +62,19 @@ body{
 
 .card{
   background-color: black;
-  background-image: url('./images/bookMaster.png');
   background-size: contain;
   background-repeat: no-repeat;
   animation: move 5s linear;
   background-position: center;
-  height: 40%;
-  width: 13%;
-  z-index: 2;
+  height: 30vmin;
+  width: 18vmin;
+  z-index: 3;
   margin: 2vmin;
+  left: 2vmin;
+  top: 17vmin;
   display: inline-block;
+  position: relative;
+  font-family: 'Modak', cursive;
 }
 
 .card-static {
@@ -89,9 +92,22 @@ body{
   left: 49%;
 }
 
+.my-projects{
+  display: inline-block;
+  position: absolute;
+  margin: 2vmin;
+  height: 10vmin;
+  z-index: 4;
+  font-size: 12vmin;
+  font-family: 'Yeon Sung', cursive;
+  animation-duration: 2.2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
 @keyframes move {
   0% {
-    transform: translate(40vw, 11vh) scale(.1);
+    transform: translate(2, 11vh) scale(.1);
   }
 
   /* Finish changes by here */
@@ -103,4 +119,19 @@ body{
   100% {
     transform: translate(0, 0);
   }
+}
+
+.bounce-6 {
+        animation-name: bounce-6;
+        animation-timing-function: ease;
+}
+
+@keyframes bounce-6 {
+        0%   { transform: scale(1,1)      translateY(0); }
+        10%  { transform: scale(1.1,.9)   translateY(0); }
+        30%  { transform: scale(.9,1.1)   translateY(-100px); }
+        50%  { transform: scale(1.05,.95) translateY(0); }
+        57%  { transform: scale(1,1)      translateY(-7px); }
+        64%  { transform: scale(1,1)      translateY(0); }
+        100% { transform: scale(1,1)      translateY(0); }
 }
