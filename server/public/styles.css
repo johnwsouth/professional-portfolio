@@ -102,7 +102,7 @@ body{
 
 .card:hover{
   transition-duration: .7s;
-  transform: translate(10px, 10px) scale(1.2);
+  transform: translate(1.2vmin, 1.2vmin) scale(1.2);
 }
 
 
@@ -175,6 +175,7 @@ body{
     top: 20vmin;
     width: 22vmin;
     right: 0;
+    font-size: .8rem;
     text-align: center;
   }
 
