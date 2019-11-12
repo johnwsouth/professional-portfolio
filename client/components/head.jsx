@@ -69,9 +69,6 @@ export default class Head extends React.Component {
         <>
           {this.state.headDelay === true && <div className='head' style={{ backgroundImage: "url('./images/head-initial.png')" }} ></div>}
         {this.currentHeadIndex < 15 ? this.state.currentHead : this.state.headTransitionArray[this.state.headTransitionArray.length - 1]}
-          {/* <div className='head' style={{ backgroundImage: "url('./images/head-initial.png')" }} onClick={this.handleClick}></div> */}
-          {/* <div className='head' style={{ backgroundImage: "url('./images/head-initial.png')" }}></div> */}
-        {/* <div className='firework-head firework-clicked'></div> */}
         </>
       );
     }
