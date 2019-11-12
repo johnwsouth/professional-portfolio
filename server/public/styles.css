@@ -65,19 +65,18 @@ body{
   background-image: url('./images/bookMaster.png');
   background-size: contain;
   background-repeat: no-repeat;
-  animation: move 4s linear;
+  animation: move 5s linear;
   background-position: center;
   height: 40%;
   width: 13%;
   z-index: 2;
   margin: 2vmin;
   display: inline-block;
-  position: absolute;
 }
 
 @keyframes move {
   0% {
-    transform: translate(400px, 0) scale(0);
+    transform: translate(40vw, 11vh) scale(.1);
   }
 
   /* Finish changes by here */
