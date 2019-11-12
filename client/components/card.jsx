@@ -5,19 +5,13 @@ export default function Card(props) {
   if (props.cardVisible === true) {
     return (
       <>
-        <div className='card' style={{ backgroundImage: 'url(' + cardPathArr[0] + ')' }}>
-          <a href="http://dev.bookmaster.johnwsouth.com" target="__blank" style={{ fontSize: '2000%', color: 'rgba(0,0,0,0)' }}>a</a>
-        </div>
-        <div className='card' style={{ backgroundImage: 'url(' + cardPathArr[1] + ')' }}>
-          <a href="https://adme.sairafe.com" target="__blank" style={{ fontSize: '2000%', color: 'rgba(0,0,0,0)' }}>a</a>
-
-        </div>
-
+        <div className='card move' style={{ backgroundImage: 'url(' + cardPathArr[0] + ')' }}></div>
+        <div className='card move move' style={{ backgroundImage: 'url(' + cardPathArr[1] + ')' }}></div>
       </>
     );
   } else {
     return (
-      <div className="card-static">
+      <div className="card-static slide-down-static">
 
       </div>
     );

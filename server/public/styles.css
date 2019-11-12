@@ -28,7 +28,7 @@ body{
   height: 80vmin;
   width : 80vmin;
   z-index: 2;
-  background-size: 500% contain;
+  background-size: 100% contain;
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: center;
@@ -64,7 +64,7 @@ body{
   background-color: black;
   background-size: contain;
   background-repeat: no-repeat;
-  animation: move 5s linear;
+  animation-duration: 5s;
   background-position: center;
   height: 30vmin;
   width: 18vmin;
@@ -83,13 +83,14 @@ body{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  animation-duration: 14s;
   height: 6.25%;
   width: 2%;
   z-index: 0;
   position: absolute;
   display: inline-block;
-  top: 30%;
-  left: 49%;
+  top: 25vmin;
+  left: 83vmin;
 }
 
 .my-projects{
@@ -98,7 +99,7 @@ body{
   margin: 2vmin;
   height: 10vmin;
   z-index: 4;
-  font-size: 12vmin;
+  font-size: 9vmin;
   font-family: 'Yeon Sung', cursive;
   animation-duration: 2.2s;
   animation-iteration-count: infinite;
@@ -106,32 +107,48 @@ body{
 }
 
 @keyframes move {
-  0% {
-    transform: translate(2, 11vh) scale(.1);
-  }
-
-  /* Finish changes by here */
-  50% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  /* Between 20% and 100%, nothing changes */
-  100% {
-    transform: translate(0, 0);
-  }
+  0%{transform: translate(50vmin, -3vmin) scale(.1);}
+  50% {transform: translate(0, 0) scale(1);}
+  100% {transform: translate(0, 0);}
+}
+.move{
+  animation-name: move;
+  animation-timing-function: ease;
 }
 
-.bounce-6 {
-        animation-name: bounce-6;
-        animation-timing-function: ease;
+.bounce-project-title {
+  animation-name: bounce-project-title;
+  animation-timing-function: ease;
 }
 
-@keyframes bounce-6 {
-        0%   { transform: scale(1,1)      translateY(0); }
-        10%  { transform: scale(1.1,.9)   translateY(0); }
-        30%  { transform: scale(.9,1.1)   translateY(-100px); }
-        50%  { transform: scale(1.05,.95) translateY(0); }
-        57%  { transform: scale(1,1)      translateY(-7px); }
-        64%  { transform: scale(1,1)      translateY(0); }
-        100% { transform: scale(1,1)      translateY(0); }
+.slide-in{
+  animation-name: slide-in;
+  animation-timing-function: ease;
+}
+
+.slide-down-static{
+  animation-name: slide-down-static;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-project-title {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-80px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}
+
+@keyframes slide-in{
+  0%{transform: translate(0, -15vh) scale(1);}
+  50% {transform: translate(0, 0) scale(1);}
+  100% {transform: translate(0, 0);}
+}
+
+@keyframes slide-down-static{
+  0%{transform: translate(0, -3vh) scale(.1);}
+  50% {transform: translate(0, 0) scale(1);}
+  100% {transform: translate(0, 0);}
 }
