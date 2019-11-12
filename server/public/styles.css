@@ -74,6 +74,21 @@ body{
   display: inline-block;
 }
 
+.card-static {
+  background-color: black;
+  background-image: url('./images/bookMaster.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 6.25%;
+  width: 2%;
+  z-index: 0;
+  position: absolute;
+  display: inline-block;
+  top: 30%;
+  left: 49%;
+}
+
 @keyframes move {
   0% {
     transform: translate(40vw, 11vh) scale(.1);

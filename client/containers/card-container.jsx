@@ -24,12 +24,15 @@ export default class CardContainer extends React.Component {
     if (this.state.cardVisible === true) {
       return (
         <div className='card-container'>
-          <Card />
+          <Card cardVisible={true}/>
         </div>
       );
     } else {
       return (
-        <div className="card-container"></div>
+        <div className="card-container">
+          <Card cardVisible={false}></Card>
+        </div>
+
       );
     }
 
