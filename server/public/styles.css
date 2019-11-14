@@ -28,7 +28,7 @@ body{
   height: 80vmin;
   width : 80vmin;
   z-index: 2;
-  background-size: 100% contain;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: center;
@@ -53,8 +53,8 @@ body{
 }
 
 .nav-bar{
-  height: 6vmin;
-  width: 38vmin;
+  height: 7vmin;
+  width: 35vmin;
   font-size: 2vmin;
   background-color: black;
   position: absolute;
@@ -67,12 +67,22 @@ body{
   animation-duration: 12s;
   animation-iteration-count: 1;
   transform-origin: bottom;
+  text-align: center;
 
 }
 
 .nav-link{
   margin: 2vmin;
   display: inline-block;
+  animation-duration: 1s;
+}
+
+.nav-link:hover{
+  cursor: pointer;
+  color: rgb(255, 159, 14);
+  transform: translate(.33vmin, .33vmin);
+  text-shadow: blanchedalmond 1px 1px 5px;
+
 }
 
 .card-container{
@@ -105,8 +115,6 @@ body{
   transform: translate(1.2vmin, 1.2vmin) scale(1.2);
 }
 
-
-
 .card-static {
   background-color: black;
   background-image: url('./images/bookMaster.png');
@@ -123,17 +131,52 @@ body{
   left: 83vmin;
 }
 
+.project-title-container{
+  position: absolute;
+  height: 20vmin;
+  width: 80vmin;
+}
+
 .my-projects{
   display: inline-block;
   position: absolute;
   margin: 2vmin;
-  height: 10vmin;
+  height: 100%;
+  width: 100%;
   z-index: 4;
   font-size: 9vmin;
   font-family: 'Yeon Sung', cursive;
   animation-duration: 2.2s;
   animation-iteration-count: 2;
   transform-origin: bottom;
+}
+
+.about-me-container{
+  position: absolute;
+  display: flex;
+  right: 15vmin;
+  top: 30vmin;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transform-origin: bottom;
+}
+
+.about-me-picture{
+  background-image: url('./images/profilePhoto.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 28vmin;
+  width: 18vmin;
+  display: inline-block;
+}
+
+.about-me-text{
+  display: inline-block;
+  width: 25vmin;
+  font-size: 1.1rem;
+  text-align: left;
+  margin-left: 3vmin;
+  font-family: 'Roboto', sans-serif;
 }
 
 @keyframes move {
@@ -147,6 +190,11 @@ body{
 
 .bounce-project-title {
   animation-name: bounce-project-title;
+  animation-timing-function: ease;
+}
+
+.bounce-and-slide-in{
+  animation-name: bounce-and-slide-in;
   animation-timing-function: ease;
 }
 
@@ -167,6 +215,9 @@ body{
 
 .hover{
   animation-name: hover;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
 }
 
 @media screen and (max-width: 992px) {
@@ -179,21 +230,59 @@ body{
     text-align: center;
   }
 
+  .about-me-container{
+  left: 10vmin;
+  top: 65vh;
+  }
+
+  .about-me-picture{
+    height: 38vmin;
+    width: 50vmin;
+
+  }
+
+  .about-me-text{
+    width: 100vmin;
+    font-size: .64rem;
+    text-align: left;
+  }
+
   .card-static {
-    top: 45vmin;
+    top: 77vmin;
     left: 45vmin;
-    height: 10%;
-    width: 8%;
+    height: 4%;
+    width: 6%;
+  }
+
+  .head{
+    height: 80vmin;
+    width: 40vmin;
+  }
+
+  .head-bg {
+    height: 100vh;
+    width: 100vw;
   }
 }
 
 @keyframes bounce-project-title {
   0%   { transform: scale(1,1)      translateY(0); }
   10%  { transform: scale(1.1,.9)   translateY(0); }
-  30%  { transform: scale(.9,1.1)   translateY(-10vmin); }
+  30%  { transform: scale(.9,1.1)   translateY(-6vmin); }
   50%  { transform: scale(1.05,.95) translateY(0); }
-  57%  { transform: scale(1,1)      translateY(-.7vmin); }
+  57%  { transform: scale(1,1)      translateY(-.3vmin); }
   64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}
+
+@keyframes bounce-and-slide-in {
+  0%   {transform: translate(50vmin, -70vmin); }
+  50%  { transform: scale(1,1)      translateY(0); }
+  55%  { transform: scale(1.1,.9)   translateY(0); }
+  65%  { transform: scale(.9,1.1)   translateY(-3vmin); }
+  75%  { transform: scale(1.05,.95) translateY(0); }
+  78.5%  { transform: scale(1,1)      translateY(-.1vmin); }
+  82%  { transform: scale(1,1)      translateY(0); }
   100% { transform: scale(1,1)      translateY(0); }
 }
 
@@ -229,6 +318,7 @@ body{
     transform: translateY(-8px);
   }
 }
+
 @keyframes hover {
   0% {
     -webkit-transform: translateY(-8px);
