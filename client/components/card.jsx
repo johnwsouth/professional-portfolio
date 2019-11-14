@@ -14,10 +14,8 @@ export default function Card(props) {
       </>
     );
   } else {
-    return (
-      <div className="card-static slide-down-static">
+    return (<div className="card-static slide-down-static">
 
-      </div>
-    );
+    </div>);
   }
 }

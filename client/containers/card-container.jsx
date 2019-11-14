@@ -43,7 +43,7 @@ export default class CardContainer extends React.Component {
       return (
         <>
           <div className='card-container'>
-            <div className = 'project-title-container hover'>
+            <div className = 'project-title-container hover' style= {{ animationDuration: '2s' }}>
               <div className='my-projects bounce-project-title'> My Projects </div>
             </div>
             <Card cardVisible={true} />
