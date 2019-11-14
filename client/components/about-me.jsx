@@ -11,14 +11,14 @@ export default class AboutMe extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ aboutMeOn: true });
-    }, 7000);
+    }, 0);
   }
 
   render() {
     if (this.state.aboutMeOn === true) {
       return (
         <div className = 'about-me-container bounce-and-slide-in'>
-          <div className='about-me-title'></div>
+          <div className='about-me-title'> About Me </div>
           <div className = 'about-me-picture hover'></div>
           <div className='about-me-text'> &nbsp; &nbsp; My name is John South, and I have always loved to learn new things.
           Recently I have been exposed to  a profession that has satisfied this hunger. With the knowledge

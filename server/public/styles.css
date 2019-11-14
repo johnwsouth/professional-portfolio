@@ -151,14 +151,22 @@ body{
   transform-origin: bottom;
 }
 
+
+
 .about-me-container{
   position: absolute;
-  display: flex;
+  display: inline-block;
   right: 15vmin;
   top: 30vmin;
   animation-duration: 2s;
   animation-iteration-count: 1;
   transform-origin: bottom;
+}
+
+.about-me-title{
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
 }
 
 .about-me-picture{
@@ -232,17 +240,21 @@ body{
 
   .about-me-container{
   left: 10vmin;
-  top: 65vh;
+  top: 60vmax;
+  }
+
+  .about-me-title{
+    font-size: 1.4rem;
+    width: auto;
   }
 
   .about-me-picture{
-    height: 38vmin;
-    width: 50vmin;
-
+    height: 30vmin;
+    width: 20vmin;
   }
 
   .about-me-text{
-    width: 100vmin;
+    width: 50vmin;
     font-size: .64rem;
     text-align: left;
   }
