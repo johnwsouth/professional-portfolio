@@ -11,12 +11,14 @@ export default class AboutMe extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ aboutMeOn: true });
-    }, 0);
+    }, 7000);
   }
 
   render() {
     if (this.state.aboutMeOn === true) {
       return (
+        <>
+        <div className='my-name bounce-and-slide-in-my-name'> John South </div>
         <div className = 'about-me-container bounce-and-slide-in'>
           <div className='about-me-title hover'> About Me </div>
           <div className = 'about-me-picture hover'></div>
@@ -25,6 +27,7 @@ export default class AboutMe extends React.Component {
           I have gained in JavaScript, extending outwards toward frameworks such as React and NodeJS,
            I can now build virtually anything. I am excited to continue learning with you.</div>
         </div>
+        </>
 
       );
     } else return null;
