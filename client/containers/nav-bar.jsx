@@ -10,13 +10,13 @@ export default class NavBar extends React.Component {
 
   render() {
     return (<div className = 'nav-bar slide-down-nav'>
-      <a href="">
+      <a href="" style = {{ color: 'white' }}>
         <div className= 'nav-link'>About Me</div>
       </a>
-      <a href="">
+      <a href="" style={{ color: 'white' }}>
         <div className= 'nav-link'>GitHub</div>
       </a>
-      <a href="">
+      <a href="" style={{ color: 'white' }}>
         <div className= 'nav-link' >Resume</div>
       </a>
     </div>);
