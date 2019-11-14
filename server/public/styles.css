@@ -85,8 +85,8 @@ body{
 }
 
 .card-container{
-  height: 80%;
-  width: 95%;
+  height: 80vh;
+  width: 95vw;
   background-color: white;
   position: absolute;
   display: flex;
