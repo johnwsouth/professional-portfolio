@@ -136,6 +136,14 @@ body{
   transform-origin: bottom;
 }
 
+.about-me-picture{
+  background-image: url('./images/profilePhoto.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 13vmin;
+  width: 8vmin;
+}
+
 @keyframes move {
   0%{transform: translate(50vmin, -3vmin) scale(.1);}
   100% {transform: translate(0, 0) scale(1);}
