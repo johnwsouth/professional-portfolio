@@ -137,19 +137,29 @@ body{
 }
 
 .about-me-container{
-
+  position: absolute;
+  display: flex;
+  right: 15vmin;
+  top: 30vmin;
+  animation-duration: 3.2s;
+  animation-iteration-count: 1;
+  transform-origin: bottom;
 }
 
 .about-me-picture{
   background-image: url('./images/profilePhoto.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 23vmin;
-  width: 14vmin;
-  position: absolute;
+  height: 28vmin;
+  width: 18vmin;
   display: inline-block;
-  right: 20vmin;
-  top: 27vmin;
+}
+
+.about-me-text{
+  display: inline-block;
+  width: 24vmin;
+  text-align: left;
+  margin-left: 3vmin;
 }
 
 @keyframes move {
@@ -163,6 +173,11 @@ body{
 
 .bounce-project-title {
   animation-name: bounce-project-title;
+  animation-timing-function: ease;
+}
+
+.bounce-and-slide-in{
+  animation-name: bounce-and-slide-in;
   animation-timing-function: ease;
 }
 
@@ -216,10 +231,21 @@ body{
 @keyframes bounce-project-title {
   0%   { transform: scale(1,1)      translateY(0); }
   10%  { transform: scale(1.1,.9)   translateY(0); }
-  30%  { transform: scale(.9,1.1)   translateY(-10vmin); }
+  30%  { transform: scale(.9,1.1)   translateY(-6vmin); }
   50%  { transform: scale(1.05,.95) translateY(0); }
-  57%  { transform: scale(1,1)      translateY(-.7vmin); }
+  57%  { transform: scale(1,1)      translateY(-.3vmin); }
   64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}
+
+@keyframes bounce-and-slide-in {
+  0%   {transform: translate(50vmin, -70vmin); }
+  50%  { transform: scale(1,1)      translateY(0); }
+  55%  { transform: scale(1.1,.9)   translateY(0); }
+  65%  { transform: scale(.9,1.1)   translateY(-3vmin); }
+  75%  { transform: scale(1.05,.95) translateY(0); }
+  78.5%  { transform: scale(1,1)      translateY(-.1vmin); }
+  82%  { transform: scale(1,1)      translateY(0); }
   100% { transform: scale(1,1)      translateY(0); }
 }
 
