@@ -53,7 +53,7 @@ body{
 }
 
 .nav-bar{
-  height: 6vmin;
+  height: 7vmin;
   width: 35vmin;
   font-size: 2vmin;
   background-color: black;
@@ -67,16 +67,22 @@ body{
   animation-duration: 12s;
   animation-iteration-count: 1;
   transform-origin: bottom;
+  text-align: center;
 
 }
 
 .nav-link{
   margin: 2vmin;
   display: inline-block;
+  animation-duration: 1s;
 }
 
 .nav-link:hover{
   cursor: pointer;
+  color: rgb(255, 159, 14);
+  transform: translate(.33vmin, .33vmin);
+  text-shadow: blanchedalmond 1px 1px 5px;
+
 }
 
 .card-container{
@@ -108,8 +114,6 @@ body{
   transition-duration: .7s;
   transform: translate(1.2vmin, 1.2vmin) scale(1.2);
 }
-
-
 
 .card-static {
   background-color: black;
@@ -212,6 +216,23 @@ body{
     right: 0;
     font-size: .8rem;
     text-align: center;
+  }
+
+  .about-me-container{
+  left: 10vmin;
+  top: 65vh;
+  }
+
+  .about-me-picture{
+    height: 38vmin;
+    width: 50vmin;
+
+  }
+
+  .about-me-text{
+    width: 100vmin;
+    font-size: .64rem;
+    text-align: left;
   }
 
   .card-static {
