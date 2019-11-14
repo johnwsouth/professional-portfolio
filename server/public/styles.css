@@ -28,7 +28,7 @@ body{
   height: 80vmin;
   width : 80vmin;
   z-index: 2;
-  background-size: 100% contain;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: center;
@@ -136,12 +136,20 @@ body{
   transform-origin: bottom;
 }
 
+.about-me-container{
+
+}
+
 .about-me-picture{
   background-image: url('./images/profilePhoto.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 13vmin;
-  width: 8vmin;
+  height: 23vmin;
+  width: 14vmin;
+  position: absolute;
+  display: inline-block;
+  right: 20vmin;
+  top: 27vmin;
 }
 
 @keyframes move {
@@ -188,10 +196,20 @@ body{
   }
 
   .card-static {
-    top: 45vmin;
+    top: 77vmin;
     left: 45vmin;
-    height: 10%;
-    width: 8%;
+    height: 4%;
+    width: 6%;
+  }
+
+  .head{
+    height: 80vmin;
+    width: 40vmin;
+  }
+
+  .head-bg {
+    height: 100vh;
+    width: 100vw;
   }
 }
 

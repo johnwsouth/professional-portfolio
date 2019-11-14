@@ -3,6 +3,7 @@ import AppContext from '../context';
 import Head from '../components/head';
 import CardContainer from '../containers/card-container';
 import NavBar from '../containers/nav-bar';
+import AboutMe from '../components/about-me';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ export default class App extends React.Component {
           <Head />
           <NavBar />
           <CardContainer />
+          <AboutMe />
           </>
       );
     }

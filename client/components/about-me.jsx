@@ -10,7 +10,9 @@ export default class AboutMe extends React.Component {
 
   render() {
     return (
-      <div className = 'about-me-picture'></div>
+      <div className = 'about-me-container'>
+        <div className = 'about-me-picture'></div>
+      </div>
 
     );
   }
