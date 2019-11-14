@@ -11,7 +11,7 @@ export default class AboutMe extends React.Component {
   render() {
     return (
       <div className = 'about-me-container bounce-and-slide-in'>
-        <div className = 'about-me-picture'></div>
+        <div className = 'about-me-picture hover'></div>
         <div className='about-me-text'> &nbsp; &nbsp; My name is John South, and I have always loved to learn new things.
           Recently I have been exposed to  a profession that has satisfied this hunger. With the knowledge
           I have gained in JavaScript, extending outwards toward frameworks such as React and NodeJS,

@@ -131,11 +131,18 @@ body{
   left: 83vmin;
 }
 
+.project-title-container{
+  position: absolute;
+  height: 20vmin;
+  width: 80vmin;
+}
+
 .my-projects{
   display: inline-block;
   position: absolute;
   margin: 2vmin;
-  height: 10vmin;
+  height: 100%;
+  width: 100%;
   z-index: 4;
   font-size: 9vmin;
   font-family: 'Yeon Sung', cursive;
@@ -165,9 +172,11 @@ body{
 
 .about-me-text{
   display: inline-block;
-  width: 24vmin;
+  width: 25vmin;
+  font-size: 1.1rem;
   text-align: left;
   margin-left: 3vmin;
+  font-family: 'Roboto', sans-serif;
 }
 
 @keyframes move {
@@ -206,6 +215,9 @@ body{
 
 .hover{
   animation-name: hover;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
 }
 
 @media screen and (max-width: 992px) {
@@ -306,6 +318,7 @@ body{
     transform: translateY(-8px);
   }
 }
+
 @keyframes hover {
   0% {
     -webkit-transform: translateY(-8px);
