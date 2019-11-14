@@ -9,14 +9,20 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      headClicked: false
+      headClicked: false,
+      aboutMeClicked: false
     };
     this.renderSelector = this.renderSelector.bind(this);
-    this.flipHeadState = this.flipHeadState.bind(this);
+    this.toggleHeadState = this.toggleHeadState.bind(this);
+    this.toggleAboutMeState = this.toggleAboutMeState.bind(this);
   }
 
-  flipHeadState() {
+  toggleHeadState() {
     this.setState({ headClicked: !this.state.headClicked });
+  }
+
+  toggleAboutMeState() {
+    this.setState({ aboutMeClicked: !this.state.aboutMeClicked });
   }
 
   renderSelector() {
@@ -30,7 +36,7 @@ export default class App extends React.Component {
           <Head />
           <NavBar />
           <CardContainer />
-          <AboutMe />
+          {this.state.aboutMeClicked === true && <AboutMe />}
           </>
       );
     }
@@ -38,7 +44,8 @@ export default class App extends React.Component {
 
   render() {
     var appContext = {
-      flipHeadState: this.flipHeadState
+      toggleHeadState: this.toggleHeadState,
+      toggleAboutMeState: this.toggleAboutMeState
     };
 
     var returnedComponents = this.renderSelector();

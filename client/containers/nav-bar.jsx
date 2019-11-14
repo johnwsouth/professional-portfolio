@@ -1,4 +1,5 @@
 import React from 'react';
+import AppContext from '../context';
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -10,9 +11,7 @@ export default class NavBar extends React.Component {
 
   render() {
     return (<div className = 'nav-bar slide-down-nav'>
-      <a href="" style = {{ color: 'white' }}>
-        <div className= 'nav-link'>About Me</div>
-      </a>
+      <div className= 'nav-link' onClick = {this.context.toggleAboutMeState}>About Me</div>
       <a href="" style={{ color: 'white' }}>
         <div className= 'nav-link'>GitHub</div>
       </a>
@@ -22,3 +21,5 @@ export default class NavBar extends React.Component {
     </div>);
   }
 }
+
+NavBar.contextType = AppContext;

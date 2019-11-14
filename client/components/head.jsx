@@ -23,7 +23,7 @@ export default class Head extends React.Component {
   }
 
   handleClick() {
-    this.context.flipHeadState();
+    this.context.toggleHeadState();
     this.setState({ headClicked: !this.state.headClicked });
     setTimeout(() => {
       this.transitionHeads();

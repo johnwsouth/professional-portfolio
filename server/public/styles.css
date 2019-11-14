@@ -75,6 +75,10 @@ body{
   display: inline-block;
 }
 
+.nav-link:hover{
+  cursor: pointer;
+}
+
 .card-container{
   height: 80%;
   width: 95%;
@@ -141,7 +145,7 @@ body{
   display: flex;
   right: 15vmin;
   top: 30vmin;
-  animation-duration: 3.2s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
   transform-origin: bottom;
 }
