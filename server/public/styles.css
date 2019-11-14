@@ -99,7 +99,8 @@ body{
   background-repeat: no-repeat;
   animation-duration: 2s;
   background-position: center;
-  height: 30vmin;
+  border-radius: 50%;
+  height: 18vmin;
   width: 18vmin;
   z-index: 3;
   margin: 2vmin;
@@ -141,23 +142,22 @@ body{
   display: inline-block;
   position: absolute;
   margin: 2vmin;
+  margin-left: 4vmin;
   height: 100%;
   width: 100%;
   z-index: 4;
   font-size: 9vmin;
   font-family: 'Yeon Sung', cursive;
   animation-duration: 2.2s;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
   transform-origin: bottom;
 }
-
-
 
 .about-me-container{
   position: absolute;
   display: inline-block;
   right: 15vmin;
-  top: 30vmin;
+  top: 15vmin;
   animation-duration: 2s;
   animation-iteration-count: 1;
   transform-origin: bottom;
@@ -166,16 +166,19 @@ body{
 .about-me-title{
   width: 100%;
   text-align: center;
-  font-size: 4rem;
+  font-size: 9vmin;
+  animation-duration: 2s;
 }
 
 .about-me-picture{
   background-image: url('./images/profilePhoto.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 28vmin;
-  width: 18vmin;
+  height: 26vmin;
+  width: 16vmin;
+  border-radius: 30%;
   display: inline-block;
+  animation-duration: 2s;
 }
 
 .about-me-text{
@@ -225,7 +228,6 @@ body{
   animation-name: hover;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
-  animation-duration: 2s;
 }
 
 @media screen and (max-width: 992px) {
