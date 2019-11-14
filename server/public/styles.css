@@ -53,21 +53,20 @@ body{
 }
 
 .nav-bar{
-  height: 7vmin;
-  width: 35vmin;
-  font-size: 2vmin;
-  background-color: black;
+  height: 20vmin;
+  width: 45vmin;
+  font-size: 4vmin;
   position: absolute;
-  color: white;
-  top: 9vmin;
-  right: 4vmin;
-  line-height: 200%;
+  color: black;
+  bottom: 20vmin;
+  right: 15vmin;
   z-index: 5;
   text-align: center;
-  animation-duration: 12s;
+  animation-duration: 16.5s;
   animation-iteration-count: 1;
   transform-origin: bottom;
   text-align: center;
+  text-shadow: gray 1px 1px 2.5px;
 
 }
 
@@ -79,9 +78,9 @@ body{
 
 .nav-link:hover{
   cursor: pointer;
-  color: rgb(255, 159, 14);
+  color: rgb(228, 64, 15);
   transform: translate(.33vmin, .33vmin);
-  text-shadow: blanchedalmond 1px 1px 5px;
+  text-shadow: gray 1px 1px 2px;
 
 }
 
@@ -99,7 +98,8 @@ body{
   background-repeat: no-repeat;
   animation-duration: 2s;
   background-position: center;
-  height: 30vmin;
+  border-radius: 50%;
+  height: 18vmin;
   width: 18vmin;
   z-index: 3;
   margin: 2vmin;
@@ -108,6 +108,8 @@ body{
   display: inline-block;
   position: relative;
   font-family: 'Modak', cursive;
+  box-shadow: gray 2px 2px 5px;
+
 }
 
 .card:hover{
@@ -122,8 +124,9 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   animation-duration: 14s;
+  border-radius: 50%;
   height: 6.25%;
-  width: 2%;
+  width: 3%;
   z-index: 0;
   position: absolute;
   display: inline-block;
@@ -141,42 +144,61 @@ body{
   display: inline-block;
   position: absolute;
   margin: 2vmin;
+  margin-left: 4vmin;
   height: 100%;
   width: 100%;
   z-index: 4;
   font-size: 9vmin;
   font-family: 'Yeon Sung', cursive;
   animation-duration: 2.2s;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
   transform-origin: bottom;
+  text-shadow: gray 2px 2px 5px;
+}
+
+.my-name{
+  font-size: 6rem;
+  text-shadow: gray 2px 2px 5px;
+  position: absolute;
+  left: 37.5%;
+  top: 10%;
+  animation-duration: 2s;
 }
 
 .about-me-container{
   position: absolute;
-  display: flex;
+  display: inline-block;
   right: 15vmin;
-  top: 30vmin;
-  animation-duration: 2s;
+  top: 13vmin;
+  animation-duration: 3s;
   animation-iteration-count: 1;
   transform-origin: bottom;
+}
+
+.about-me-title{
+  text-shadow: gray 2px 2px 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 9vmin;
+  animation-duration: 2s;
 }
 
 .about-me-picture{
   background-image: url('./images/profilePhoto.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 28vmin;
-  width: 18vmin;
+  height: 26vmin;
+  width: 16vmin;
+  border-radius: 30%;
   display: inline-block;
+  animation-duration: 2s;
 }
 
 .about-me-text{
   display: inline-block;
   width: 25vmin;
-  font-size: 1.1rem;
   text-align: left;
   margin-left: 3vmin;
-  font-family: 'Roboto', sans-serif;
 }
 
 @keyframes move {
@@ -195,6 +217,11 @@ body{
 
 .bounce-and-slide-in{
   animation-name: bounce-and-slide-in;
+  animation-timing-function: ease;
+}
+
+.bounce-and-slide-in-my-name{
+  animation-name: bounce-and-slide-in-my-name;
   animation-timing-function: ease;
 }
 
@@ -217,46 +244,57 @@ body{
   animation-name: hover;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
-  animation-duration: 2s;
 }
 
 @media screen and (max-width: 992px) {
   .nav-bar {
     height: 30vmin;
-    top: 20vmin;
-    width: 22vmin;
-    right: 0;
-    font-size: .8rem;
+    top: 30vmin;
+    width: 30vmin;
+    right: 11vmin;
     text-align: center;
+    font-size: 1.2rem;
+    animation-duration: 2s;
+
+  }
+
+  .my-name{
+    font-size: 1.4rem;
+    top: 38%;
+    left: 36%;
   }
 
   .about-me-container{
   left: 10vmin;
-  top: 65vh;
+  top: 60vmax;
+  }
+
+  .about-me-title{
+    font-size: 1.4rem;
+    width: auto;
   }
 
   .about-me-picture{
-    height: 38vmin;
-    width: 50vmin;
-
+    height: 30vmin;
+    width: 20vmin;
   }
 
   .about-me-text{
-    width: 100vmin;
+    width: 50vmin;
     font-size: .64rem;
     text-align: left;
   }
 
   .card-static {
-    top: 77vmin;
+    top: 50vmin;
     left: 45vmin;
     height: 4%;
     width: 6%;
   }
 
   .head{
-    height: 80vmin;
-    width: 40vmin;
+    height: 60vmin;
+    width: 60vmin;
   }
 
   .head-bg {
@@ -286,6 +324,17 @@ body{
   100% { transform: scale(1,1)      translateY(0); }
 }
 
+@keyframes bounce-and-slide-in-my-name {
+  0%   {transform: translate(-50vmin, -50vmin); }
+  50%  { transform: scale(1,1)      translateY(0); }
+  55%  { transform: scale(1.1,.9)   translateY(0); }
+  65%  { transform: scale(.9,1.1)   translateY(-3vmin); }
+  75%  { transform: scale(1.05,.95) translateY(0); }
+  78.5%  { transform: scale(1,1)      translateY(-.1vmin); }
+  82%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}
+
 @keyframes slide-in{
   0%{transform: translate(0, -15vh) scale(1);}
   50% {transform: translate(0, 0) scale(1);}
@@ -299,9 +348,8 @@ body{
 }
 
 @keyframes slide-down-nav{
-  0%{transform: translate(0, -20vmin) scale(1);}
-  50% {transform: translate(0, 0) scale(1);}
-  100% {transform: translate(0, 0);}
+  0%{transform: translate(0, 80vmin) scale(1);}
+  100% {transform: translate(0, 0) scale(1);}
 }
 
 @-webkit-keyframes hover {

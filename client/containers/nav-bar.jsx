@@ -5,18 +5,19 @@ export default class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      headOpened: false,
-      aboutMeClicked: false
+      headOpened: false
     };
   }
 
   render() {
     return (<div className = 'nav-bar slide-down-nav'>
-      <div className= 'nav-link' onClick = {this.context.toggleAboutMeState}>About Me</div>
-      <a href="https://www.github.com/johnwsouth" target='__blank' style={{ color: 'white' }}>
-        <div className= 'nav-link'>GitHub</div>
+      <a href="https://www.github.com/johnwsouth" target='__blank' style={{ color: 'black' }}>
+        <div className='nav-link'><i className="fab fa-github"></i> GitHub</div>
       </a>
-      <div className= 'nav-link' >Resume</div>
+      <a href="https://www.linkedin.com/in/john-south/" target='__blank' style={{ color: 'black' }}>
+        <div className='nav-link'><i className="fab fa-linkedin"></i> LinkedIn</div>
+      </a>
+      <div className='nav-link' ><i className="fas fa-book"></i> Resume</div>
     </div>);
   }
 }
