@@ -36,7 +36,7 @@ export default class App extends React.Component {
           <Head />
           <NavBar />
           <CardContainer />
-          {this.state.aboutMeClicked === true && <AboutMe />}
+          <AboutMe />
           </>
       );
     }
