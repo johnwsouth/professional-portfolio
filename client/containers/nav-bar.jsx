@@ -17,7 +17,9 @@ export default class NavBar extends React.Component {
       <a href="https://www.linkedin.com/in/john-south/" target='__blank' style={{ color: 'black' }}>
         <div className='nav-link'><i className="fab fa-linkedin"></i> LinkedIn</div>
       </a>
-      <div className='nav-link' ><i className="fas fa-book"></i> Resume</div>
+      <a href="./resume.pdf">
+        <div className='nav-link' ><i className="fas fa-book"></i> Resume </div>
+      </a>
     </div>);
   }
 }
