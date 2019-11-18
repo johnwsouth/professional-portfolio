@@ -18,7 +18,7 @@ export default class NavBar extends React.Component {
         <div className='nav-link'><i className="fab fa-linkedin"></i> LinkedIn</div>
       </a>
       <a href="./resume.pdf" style={{ color: 'black' }}>
-        <div className='nav-link' style={{ color: 'black' }}><i className="fas fa-book"></i> Resume </div>
+        <div className='nav-link'><i className="fas fa-book"></i> Resume </div>
       </a>
     </div>);
   }
