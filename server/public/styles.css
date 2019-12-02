@@ -244,7 +244,7 @@ body{
   animation-iteration-count: infinite;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .nav-bar {
     height: 30vmin;
     top: 30vmin;
@@ -257,9 +257,9 @@ body{
   }
 
   .my-name{
-    font-size: 1.4rem;
-    top: 40.5%;
-    left: 36%;
+    font-size: 1.2rem;
+    top: 40vmax;
+    left: 37.5vmin;
   }
 
   .about-me-container{
