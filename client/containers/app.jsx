@@ -8,18 +8,29 @@ export default class App extends React.Component {
     super(props);
     this.state = {
     };
-    this.scrollToTop = this.scrollToTop.bind(this);
+  }
+  componentDidMount() {
+    scrollSpy.update();
   }
 
-  scrollToTop() {
-    scroll.scrollTo(200);
+  scrollToSecondContainer() {
+    scroller.scrollTo('second-container', {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 50 }
+    );
   }
 
   renderSelector() {
     return (
-      <div onClick={() => {
-        this.scrollToTop();
-      }}> I am your portfolio</div>
+      <>
+      <div name='first-container'style={{ width: '100vw', height: '100vh' }}onClick={() => {
+        this.scrollToSecondContainer();
+      }}> I am the first view</div>
+      <div name='second-container' style={{ width: '100vw', height: '100vh' }} onClick={() => {
+      }}> I am the second view</div>
+      </>
     );
   }
 
