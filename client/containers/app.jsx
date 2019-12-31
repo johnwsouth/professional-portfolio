@@ -1,5 +1,7 @@
 import React from 'react';
 import AppContext from '../context';
+import * as Scroll from 'react-scroll'; // eslint-disable-line
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'; // eslint-disable-line
 
 export default class App extends React.Component {
   constructor(props) {
@@ -7,9 +9,29 @@ export default class App extends React.Component {
     this.state = {
     };
   }
+  componentDidMount() {
+    scrollSpy.update();
+  }
+
+  scrollToSecondContainer() {
+    scroller.scrollTo('second-container', {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 50 }
+    );
+  }
 
   renderSelector() {
-    return (<div>I am your portfolio</div>);
+    return (
+      <>
+      <div name='first-container'style={{ width: '100vw', height: '100vh' }}onClick={() => {
+        this.scrollToSecondContainer();
+      }}> I am the first view</div>
+      <div name='second-container' style={{ width: '100vw', height: '100vh' }} onClick={() => {
+      }}> I am the second view</div>
+      </>
+    );
   }
 
   render() {
