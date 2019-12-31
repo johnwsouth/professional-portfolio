@@ -6,3 +6,21 @@
 body{
   margin: 0;
 }
+
+.vertical-page-nav-button{
+  background-color: gray;
+  height: 8%;
+  width: 17%;
+  margin-top: 1vh;
+  margin-left: .5vw;
+}
+
+.nav-container{
+  display: inline-block;
+  position: fixed;
+  top: 30vh;
+  left: 0;
+  height: 40vh;
+  width: 2%;
+  background-color: black;
+}

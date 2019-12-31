@@ -1,5 +1,6 @@
 import React from 'react';
 import AppContext from '../context';
+import VerticalNav from '../components/vertical-nav';
 import * as Scroll from 'react-scroll'; // eslint-disable-line
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'; // eslint-disable-line
 
@@ -25,12 +26,14 @@ export default class App extends React.Component {
   renderSelector() {
     return (
       <>
-      <div name='first-container'style={{ width: '100vw', height: '100vh' }}onClick={() => {
-        this.scrollToSecondContainer();
-      }}> I am the first view</div>
-      <div name='second-container' style={{ width: '100vw', height: '100vh' }} onClick={() => {
-      }}> I am the second view</div>
+      <VerticalNav/>
+        <div name='first-container'style={{ width: '100vw', height: '100vh' }}onClick={() => {
+          this.scrollToSecondContainer();
+        }}> I am the first view</div>
+        <div name='second-container' style={{ width: '100vw', height: '100vh' }} onClick={() => {
+        }}> I am the second view</div>
       </>
+
     );
   }
 
