@@ -1,4 +1,5 @@
 import React from 'react';
+import VerticalNavButton from './vertical-nav-button';
 
 export default class VerticalNav extends React.Component {
   constructor(props) {
@@ -10,14 +11,10 @@ export default class VerticalNav extends React.Component {
   }
 
   createNavComponents() {
-    var navTextArr = ['BookMaster', 'AdMe'];
+    var navTextArr = ['Chana\'s butthole', 'Page 2', 'Page 3'];
     var navElementArr = [];
-    for (var i = 0; i < 2; i++) {
-      navElementArr.push(<div
-        key={ 'vertical-nav-' + i }
-        name={'vertical-nav-' + i}
-        className='vertical-page-nav-button'>
-        {navTextArr[i]}</div>);
+    for (var i = 0; i < 3; i++) {
+      navElementArr.push(<VerticalNavButton key={Math.random() * i} number={i} label = {navTextArr[i]}/>);
     }
     return navElementArr;
   }

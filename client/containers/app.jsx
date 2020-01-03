@@ -15,7 +15,7 @@ export default class App extends React.Component {
   }
 
   scrollToSecondContainer() {
-    scroller.scrollTo('second-container', {
+    scroller.scrollTo('page-2', {
       duration: 1500,
       delay: 100,
       smooth: true,
@@ -27,11 +27,16 @@ export default class App extends React.Component {
     return (
       <>
       <VerticalNav/>
-        <div name='first-container'style={{ width: '100vw', height: '100vh' }}onClick={() => {
-          this.scrollToSecondContainer();
-        }}> I am the first view</div>
-        <div name='second-container' style={{ width: '100vw', height: '100vh' }} onClick={() => {
-        }}> I am the second view</div>
+        <div className='landing-page page' name='page-0'>
+
+        </div>
+        <div className='page-2 page' name='page-1' >
+
+        </div>
+        <div className='page-3 page' name='page-2'>
+
+        </div>
+
       </>
 
     );

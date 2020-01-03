@@ -1,18 +1,45 @@
 #root{
   font-family: 'Roboto', sans-serif;
-
 }
 
 body{
   margin: 0;
 }
 
+.page {
+  width: 100vw;
+  height: 100vh;
+}
+
+.landing-page{
+  background-image: url('images/water-melon-candy-minimal.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.page-2{
+  background-image: url('images/towel-minimalist-2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page-3{
+  background-image: url('images/guitar-strings-minimal.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .vertical-page-nav-button{
-  background-color: gray;
+  background-color: gainsboro;
   height: 8%;
-  width: 17%;
+  width: 15%;
   margin-top: 1vh;
-  margin-left: .5vw;
+  margin-left: 1vw;
+}
+
+.vertical-page-nav-button:hover{
+  background-color: white;
 }
 
 .nav-container{
@@ -21,6 +48,12 @@ body{
   top: 30vh;
   left: 0;
   height: 40vh;
-  width: 2%;
-  background-color: black;
+  width: 3%;
+}
+
+.vertical-page-nav-button-text{
+  margin-left: 1.6vw;
+  line-height: 190%;
+  color: white;
+  width: 100%;
 }
