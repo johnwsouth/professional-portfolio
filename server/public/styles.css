@@ -1,0 +1,242 @@
+#root{
+  font-family: 'Muli', sans-serif;
+}
+
+body{
+  margin: 0;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+}
+
+.landing-page{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-page-title{
+  font-size: 3.7rem;
+  font-family: 'Paytone One', sans-serif;
+}
+
+.landing-page-subtitle{
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.landing-page-title-container{
+  align-self: center;
+  margin-bottom: 30vh;
+}
+
+.web-development-image{
+  position: absolute;
+  bottom: 0;
+  justify-self: center;
+  left: 30vw;
+}
+
+.smiling-emoji-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh
+}
+
+.smiling-emoji{
+  height: 15rem;
+  z-index: 3;
+}
+
+.code-icon{
+  color: #7510F7;
+  margin-right: 1vw;
+}
+
+.smiling-emoji-backdrop{
+  margin-top: 3vh;
+  background-color: #7510F7;
+  border-radius: 50%;
+  height: 27vmin;
+  width: 27vmin;
+  position: absolute;
+
+}
+
+.projects-page-title-container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ height: 13vh;
+}
+
+.projects-page-title{
+  font-size: 5rem;
+  font-family: 'Paytone One', sans-serif;
+  color: white;
+
+}
+
+.page-2{
+  background-image: url('images/project-page.png');
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
+
+.page-3{
+  background-image: url('images/about-me-contact.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.vertical-page-nav-button{
+  background-color: gray;
+  height: 10%;
+  width: 3%;
+  margin-top: 1vh;
+  margin-left: 1vw;
+}
+
+.vertical-page-nav-button:hover{
+  background-color: black;
+  width: 4.33%;
+  cursor: pointer;
+}
+
+.nav-container{
+  display: inline-block;
+  position: fixed;
+  top: 30vh;
+  left: 0;
+  height: 40vh;
+  width: 6%;
+}
+
+.vertical-page-nav-button-text{
+  margin-left: 1vw;
+  color: indigo;
+  width: 100%;
+  line-height: 230%
+}
+
+.top-nav-container{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+  width: 25vw;
+  background-color: #7510F7;
+  right: 0;
+  font-size: 1.2rem;
+}
+
+.top-nav-button{
+  display: inline-block;
+  margin-top: 1vh;
+  height: 50%;
+  width: 33%;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  text-align: center;
+}
+
+.top-nav-button:hover{
+  color: lightgray;
+  cursor: pointer;
+}
+
+.project-card-container{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 80%;
+  left: 10%;
+  margin-top: 3.5vh;
+}
+.project-card{
+  height: 80%;
+  width: 28%;
+  margin: 2vw;
+  background-color: white;
+  box-shadow: 1px 1px 3px black;
+}
+
+.project-card:hover{
+  transform: translate(-10px, -5px);
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+
+.project-card-title{
+  font-size: 2.3rem;
+  padding-top: 1vh;
+  text-align: center;
+}
+
+.project-card-subtitle{
+  text-align: center;
+  align-self: center;
+  height: 10%;
+
+  font-family: 'Muli', sans-serif;
+  font-size: 1.1rem;
+}
+
+.book-master{
+  height: 13rem;
+  margin-left: 5vw;
+}
+
+.ad-me{
+  height: 7rem;
+  margin-top: 5vh;
+  margin-left: 2vw;
+}
+
+.project-card-image-container{
+  height: 40%;
+}
+
+.technologies-slab{
+  display: flex;
+  width: 100%;
+  margin-top: 2vh;
+  justify-content: center;
+}
+
+.technologies-label{
+  font-size: 1.5rem;
+  margin: .5rem;
+  font-family: 'Arimo', sans-serif;
+}
+
+.technologies-image{
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+.visit-project-button{
+  margin-top: 2vh;
+  background-color: #7510F7;
+  color: white;
+  box-shadow: .5px 1px 1px blanchedalmond;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: .5rem;
+  font-family: 'Muli', sans-serif;
+}
+
+.visit-project-button:active{
+  transform: translate(5px, 5px);
+}
