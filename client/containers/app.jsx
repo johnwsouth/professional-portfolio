@@ -1,5 +1,9 @@
 import React from 'react';
 import AppContext from '../context';
+import VerticalNav from '../components/vertical-nav';
+import TopNav from '../components/top-nav';
+import LandingPage from './landing-page';
+import MyProjects from './my-projects';
 import * as Scroll from 'react-scroll'; // eslint-disable-line
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'; // eslint-disable-line
 
@@ -14,7 +18,7 @@ export default class App extends React.Component {
   }
 
   scrollToSecondContainer() {
-    scroller.scrollTo('second-container', {
+    scroller.scrollTo('page-2', {
       duration: 1500,
       delay: 100,
       smooth: true,
@@ -25,12 +29,20 @@ export default class App extends React.Component {
   renderSelector() {
     return (
       <>
-      <div name='first-container'style={{ width: '100vw', height: '100vh' }}onClick={() => {
-        this.scrollToSecondContainer();
-      }}> I am the first view</div>
-      <div name='second-container' style={{ width: '100vw', height: '100vh' }} onClick={() => {
-      }}> I am the second view</div>
+      <VerticalNav/>
+      <TopNav/>
+        <div className='landing-page page' name='page-0'>
+          <LandingPage/>
+        </div>
+        <div className='page-2 page' name='page-1' >
+          <MyProjects/>
+        </div>
+        <div className='page-3 page' name='page-2'>
+
+        </div>
+
       </>
+
     );
   }
 
