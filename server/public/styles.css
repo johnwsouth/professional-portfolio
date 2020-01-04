@@ -12,14 +12,14 @@ body{
 }
 
 .landing-page{
-  background-image: url('images/water-melon-candy-minimal.jpeg');
+  background-image: url('images/watermelon.png');
   background-size: cover;
   background-repeat: no-repeat;
 
 }
 
 .page-2{
-  background-image: url('images/towel-minimalist-2.png');
+  background-image: url('images/towel-minimalist.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
