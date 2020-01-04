@@ -12,7 +12,7 @@ function handleClick(number) {
 function TopNavButton(props) {
   return (
     <Element className={'top-nav-button top-nav-button-' + props.number} onClick={() => { handleClick(props.number); }}>
-      {'PAGE ' + props.number}
+      {props.label}
     </Element>
   );
 }
@@ -28,8 +28,9 @@ export default class TopNav extends React.Component {
 
   renderTopNavButton() {
     var topNavComponents = [];
+    var topNavText = ['Welcome', 'My Projects', 'About Me'];
     for (var i = 0; i < 3; i++) {
-      topNavComponents.push(<TopNavButton key= {Math.random() * i} number={i}></TopNavButton>);
+      topNavComponents.push(<TopNavButton key= {Math.random() * i} label={topNavText[i]} number={i}></TopNavButton>);
     }
     return topNavComponents;
   }

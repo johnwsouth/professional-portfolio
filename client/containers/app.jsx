@@ -2,6 +2,8 @@ import React from 'react';
 import AppContext from '../context';
 import VerticalNav from '../components/vertical-nav';
 import TopNav from '../components/top-nav';
+import LandingPage from './landing-page';
+import MyProjects from './my-projects';
 import * as Scroll from 'react-scroll'; // eslint-disable-line
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'; // eslint-disable-line
 
@@ -30,20 +32,10 @@ export default class App extends React.Component {
       <VerticalNav/>
       <TopNav/>
         <div className='landing-page page' name='page-0'>
-          <div className='landing-page-title-container'>
-            <div className='landing-page-title'>Full Stack Developer, Designer
-              <div className='landing-page-subtitle'> Simple code, beautiful applications </div>
-            </div>
-            <div className='smiling-emoji-container'>
-              <img className='smiling-emoji' src="./images/smiling-emoji.png" alt="no face"/>
-              <div className='smiling-emoji-backdrop'></div>
-            </div>
-            <img className='web-development-image' src="./images/webdevelopment.svg" alt="no image"/>
-          </div>
-
+          <LandingPage/>
         </div>
         <div className='page-2 page' name='page-1' >
-
+          <MyProjects/>
         </div>
         <div className='page-3 page' name='page-2'>
 
