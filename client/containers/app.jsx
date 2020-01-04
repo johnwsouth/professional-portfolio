@@ -1,6 +1,7 @@
 import React from 'react';
 import AppContext from '../context';
 import VerticalNav from '../components/vertical-nav';
+import TopNav from '../components/top-nav';
 import * as Scroll from 'react-scroll'; // eslint-disable-line
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'; // eslint-disable-line
 
@@ -27,6 +28,7 @@ export default class App extends React.Component {
     return (
       <>
       <VerticalNav/>
+      <TopNav/>
         <div className='landing-page page' name='page-0'>
 
         </div>

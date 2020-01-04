@@ -1,5 +1,5 @@
 #root{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Courier Prime', monospace;
 }
 
 body{
@@ -12,7 +12,7 @@ body{
 }
 
 .landing-page{
-  background-image: url('images/watermelon.png');
+  background-image: url('images/water-melon-candy-minimal.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -33,13 +33,15 @@ body{
 .vertical-page-nav-button{
   background-color: gainsboro;
   height: 8%;
-  width: 15%;
+  width: 3%;
   margin-top: 1vh;
   margin-left: 1vw;
 }
 
 .vertical-page-nav-button:hover{
   background-color: white;
+  width: 4.33%;
+  cursor: pointer;
 }
 
 .nav-container{
@@ -48,7 +50,7 @@ body{
   top: 30vh;
   left: 0;
   height: 40vh;
-  width: 3%;
+  width: 6%;
 }
 
 .vertical-page-nav-button-text{
@@ -56,4 +58,29 @@ body{
   line-height: 190%;
   color: white;
   width: 100%;
+}
+
+.top-nav-container{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+  width: 40vw;
+  top: 1vh;
+  right: 0;
+  font-size: 1.4rem;
+}
+
+.top-nav-button{
+  display: inline-block;
+  height: 98%;
+  width: 32%;
+  color: white;
+  border: none;
+  text-align: right;
+}
+
+.top-nav-button:hover{
+  color: gray;
+  cursor: pointer;
 }

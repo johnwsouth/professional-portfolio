@@ -11,7 +11,7 @@ export default class VerticalNav extends React.Component {
   }
 
   createNavComponents() {
-    var navTextArr = ['Page 1', 'Page 2', 'Page 3'];
+    var navTextArr = ['Page1', 'Page2', 'Page3'];
     var navElementArr = [];
     for (var i = 0; i < 3; i++) {
       navElementArr.push(<VerticalNavButton key={Math.random() * i} number={i} label = {navTextArr[i]}/>);
