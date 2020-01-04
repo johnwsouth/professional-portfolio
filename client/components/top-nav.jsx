@@ -12,7 +12,7 @@ function handleClick(number) {
 function TopNavButton(props) {
   return (
     <Element className={'top-nav-button top-nav-button-' + props.number} onClick={() => { handleClick(props.number); }}>
-      {'Page ' + props.number}
+      {'PAGE ' + props.number}
     </Element>
   );
 }

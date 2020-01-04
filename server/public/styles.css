@@ -1,5 +1,6 @@
 #root{
-  font-family: 'Courier Prime', monospace;
+  font-family: 'Arimo', sans-serif;
+
 }
 
 body{
@@ -12,9 +13,56 @@ body{
 }
 
 .landing-page{
-  background-image: url('images/water-melon-candy-minimal.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-page-title{
+  font-size: 3.7rem;
+  font-family: 'Paytone One', sans-serif;
+}
+
+.landing-page-subtitle{
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.landing-page-title-container{
+  align-self: center;
+  margin-bottom: 30vh;
+}
+
+.web-development-image{
+  position: absolute;
+  bottom: 0;
+  justify-self: center;
+  left: 30vw;
+}
+
+.smiling-emoji-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh
+}
+
+.smiling-emoji{
+  height: 15rem;
+  z-index: 3;
+
+}
+
+.smiling-emoji-backdrop{
+  margin-top: 3vh;
+  background-color: rebeccapurple;
+  border-radius: 50%;
+  height: 27vmin;
+  width: 27vmin;
+  position: absolute;
 
 }
 
@@ -25,13 +73,13 @@ body{
 }
 
 .page-3{
-  background-image: url('images/guitar-strings-minimal.jpg');
+  background-image: url('images/guitar-strings-minimal-2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .vertical-page-nav-button{
-  background-color: gainsboro;
+  background-color: gray;
   height: 8%;
   width: 3%;
   margin-top: 1vh;
@@ -39,7 +87,7 @@ body{
 }
 
 .vertical-page-nav-button:hover{
-  background-color: white;
+  background-color: black;
   width: 4.33%;
   cursor: pointer;
 }
@@ -54,9 +102,9 @@ body{
 }
 
 .vertical-page-nav-button-text{
-  margin-left: 1.6vw;
+  margin-left: 1vw;
   line-height: 190%;
-  color: white;
+  color: black;
   width: 100%;
 }
 
@@ -68,19 +116,19 @@ body{
   width: 40vw;
   top: 1vh;
   right: 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .top-nav-button{
   display: inline-block;
   height: 98%;
-  width: 32%;
-  color: white;
+  width: 30%;
+  color: black;
   border: none;
   text-align: right;
 }
 
 .top-nav-button:hover{
-  color: gray;
+  color: lightgray;
   cursor: pointer;
 }

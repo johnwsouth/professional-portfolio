@@ -30,6 +30,16 @@ export default class App extends React.Component {
       <VerticalNav/>
       <TopNav/>
         <div className='landing-page page' name='page-0'>
+          <div className='landing-page-title-container'>
+            <div className='landing-page-title'>Full Stack Developer, Designer
+              <div className='landing-page-subtitle'> Simple code, beautiful applications </div>
+            </div>
+            <div className='smiling-emoji-container'>
+              <img className='smiling-emoji' src="./images/smiling-emoji.png" alt="no face"/>
+              <div className='smiling-emoji-backdrop'></div>
+            </div>
+            <img className='web-development-image' src="./images/webdevelopment.svg" alt="no image"/>
+          </div>
 
         </div>
         <div className='page-2 page' name='page-1' >
