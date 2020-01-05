@@ -81,20 +81,32 @@ body{
   font-size: 5rem;
   font-family: 'Paytone One', sans-serif;
   color: white;
+  text-align: center;
 
 }
 
 .page-2{
   background-image: url('images/project-page.png');
   background-size: cover;
-
   background-repeat: no-repeat;
+}
+
+.page-2-projects{
+  height: 94vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .page-3{
   background-image: url('images/about-me-contact.png');
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .vertical-page-nav-button{
@@ -128,6 +140,7 @@ body{
 }
 
 .top-nav-container{
+  z-index: 3;
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -156,14 +169,13 @@ body{
 
 .project-card-container{
   display: flex;
-  position: absolute;
   align-items: center;
   justify-content: center;
   height: 80%;
   width: 80%;
-  left: 10%;
-  margin-top: 3.5vh;
+  padding-bottom: 10vh;
 }
+
 .project-card{
   height: 80%;
   width: 28%;
@@ -239,4 +251,68 @@ body{
 
 .visit-project-button:active{
   transform: translate(5px, 5px);
+}
+
+.about-me-title{
+  font-size: 6rem;
+  position: absolute;
+  top: 0;
+  font-family: 'Paytone One', sans-serif;
+  color: white;
+}
+
+.about-me-container{
+  width: 80%;
+  height: 60%;
+  margin-bottom: 5.5%;
+}
+
+.about-me-label{
+  font-size: 3rem;
+  box-shadow: 2px 1px 2.5px black;
+  margin: 1vmin;
+  display: inline-block;
+  padding: 1vmin;
+  font-family: 'Muli', sans-serif;
+}
+
+.about-me-label:hover{
+  cursor: pointer;
+}
+
+.about-me-label:active{
+  transform: translate(2px, 2px);
+}
+
+.find-me-on{
+  font-size: 3rem;
+  font-family: 'Paytone One', sans-serif;
+  display: inline-block;
+}
+
+.github-link:hover{
+  background-color: gray;
+  color: white;
+}
+
+.linkedin-link:hover{
+  background-color: #15bdfa;
+  color: white;
+}
+
+.resume-container{
+  font-family: 'Paytone One', sans-serif;
+  font-size: 3rem;
+  margin-top: 10%;
+  display: block;
+}
+
+a.about-me-label{
+  color: black;
+  text-decoration: none;
+}
+
+.resume-link:hover{
+  color: white;
+  background-color: orangered;
 }

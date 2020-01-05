@@ -1,12 +1,7 @@
 import React from 'react';
 
 export default class LandingPage extends React.Component {
-  handleScroll(e) {
-    var element = e.target;
-    if (element.scrollHeight - element.scrollTop === element.clientHeight) {
-      // do something at end of scroll
-    }
-  }
+
   render() {
     return (
       <div className='landing-page-title-container'>
