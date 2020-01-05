@@ -22,7 +22,7 @@ export default class VerticalNav extends React.Component {
   render() {
     var navComponents = this.createNavComponents();
     return (
-      <div className = 'nav-container'>
+      <div className = 'vertical-nav-container'>
         {navComponents}
       </div>
     );

@@ -15,30 +15,34 @@ body{
   background-color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.landing-page-title-container{
+  margin-bottom: 10vmax;
 }
 
 .landing-page-title{
-  font-size: 3.7rem;
+  font-size: 3.8vmax;
   font-family: 'Paytone One', sans-serif;
+  text-shadow: 1px 1px 1px gray;
+  text-align: center;
+
 }
 
 .landing-page-subtitle{
   font-family: 'Arimo', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.9vmax;
   text-align: center;
   margin-top: 2vh;
+  text-shadow: 1px 1px 1px gray;
 }
 
-.landing-page-title-container{
-  align-self: center;
-  margin-bottom: 30vh;
-}
 
 .web-development-image{
+  height: 16vmax;
   position: absolute;
   bottom: 0;
-  justify-self: center;
-  left: 30vw;
 }
 
 .smiling-emoji-container{
@@ -50,7 +54,7 @@ body{
 }
 
 .smiling-emoji{
-  height: 15rem;
+  height: 16vmax;
   z-index: 3;
 }
 
@@ -63,9 +67,10 @@ body{
   margin-top: 3vh;
   background-color: #7510F7;
   border-radius: 50%;
-  height: 27vmin;
-  width: 27vmin;
+  height: 14vmax;
+  width: 14vmax;
   position: absolute;
+  box-shadow: 1px 1px 5px gray;
 
 }
 
@@ -78,64 +83,81 @@ body{
 }
 
 .projects-page-title{
-  font-size: 5rem;
+  font-size: 5vmax;
   font-family: 'Paytone One', sans-serif;
   color: white;
+  text-align: center;
 
 }
 
 .page-2{
   background-image: url('images/project-page.png');
   background-size: cover;
-
   background-repeat: no-repeat;
+}
+
+.page-2-projects{
+  height: 94vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .page-3{
   background-image: url('images/about-me-contact.png');
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .vertical-page-nav-button{
   background-color: gray;
-  height: 10%;
-  width: 3%;
-  margin-top: 1vh;
-  margin-left: 1vw;
+  height: 2vmax;
+  width: .35vmax;
+  margin-top: 1vmax;
+  margin-left: 1vmax;
+  cursor: pointer
 }
 
 .vertical-page-nav-button:hover{
   background-color: black;
-  width: 4.33%;
-  cursor: pointer;
+  width: .5vmax;
+
 }
 
-.nav-container{
+.vertical-nav-container{
   display: inline-block;
   position: fixed;
   top: 30vh;
   left: 0;
   height: 40vh;
   width: 6%;
+  z-index: 3;
 }
 
 .vertical-page-nav-button-text{
-  margin-left: 1vw;
-  color: indigo;
+  margin-left: 1vmax;
+  color: slategray;
   width: 100%;
-  line-height: 230%
+  line-height: 230%;
+  font-size: 1vmax;
 }
 
 .top-nav-container{
+  z-index: 3;
   position: fixed;
   display: flex;
   flex-direction: row;
-  height: 5vh;
-  width: 25vw;
+  height: 3vmax;
+  width: 25vmax;
   background-color: #7510F7;
   right: 0;
   font-size: 1.2rem;
+  box-shadow: -1px 1px 5px black;
 }
 
 .top-nav-button{
@@ -143,10 +165,11 @@ body{
   margin-top: 1vh;
   height: 50%;
   width: 33%;
-  font-size: 1.5rem;
+  font-size: 1.5vmax;
   color: white;
   border: none;
   text-align: center;
+  text-shadow: 1px 1px 2px black
 }
 
 .top-nav-button:hover{
@@ -156,17 +179,16 @@ body{
 
 .project-card-container{
   display: flex;
-  position: absolute;
   align-items: center;
   justify-content: center;
-  height: 80%;
-  width: 80%;
-  left: 10%;
-  margin-top: 3.5vh;
+  height: 50vmax;
+  width: 90vmax;
+  padding-bottom: 10vh;
 }
+
 .project-card{
   height: 80%;
-  width: 28%;
+  width: 25vmax;
   margin: 2vw;
   background-color: white;
   box-shadow: 1px 1px 3px black;
@@ -179,7 +201,7 @@ body{
 }
 
 .project-card-title{
-  font-size: 2.3rem;
+  font-size: 2.3vmax;
   padding-top: 1vh;
   text-align: center;
 }
@@ -190,18 +212,18 @@ body{
   height: 10%;
 
   font-family: 'Muli', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.1vmax;
 }
 
 .book-master{
-  height: 13rem;
-  margin-left: 5vw;
+  height: 13vmax;
+  margin-left: 5.5vmax;
 }
 
 .ad-me{
-  height: 7rem;
-  margin-top: 5vh;
-  margin-left: 2vw;
+  height: 6vmax;
+  margin-top: 2.5vmax;
+  margin-left: 4vmax;
 }
 
 .project-card-image-container{
@@ -211,18 +233,18 @@ body{
 .technologies-slab{
   display: flex;
   width: 100%;
-  margin-top: 2vh;
+  margin-top: 2%;
   justify-content: center;
 }
 
 .technologies-label{
-  font-size: 1.5rem;
+  font-size: 1.5vmax;
   margin: .5rem;
   font-family: 'Arimo', sans-serif;
 }
 
 .technologies-image{
-  height: 3rem;
+  height: 3vmax;
   margin-left: 1rem;
 }
 
@@ -232,11 +254,75 @@ body{
   color: white;
   box-shadow: .5px 1px 1px blanchedalmond;
   width: 100%;
-  font-size: 1.2rem;
-  padding: .5rem;
+  font-size: 1.2vmax;
+  padding: .5vmax;
   font-family: 'Muli', sans-serif;
 }
 
 .visit-project-button:active{
   transform: translate(5px, 5px);
+}
+
+.about-me-title{
+  font-size: 6vmax;
+  position: absolute;
+  top: 0;
+  font-family: 'Paytone One', sans-serif;
+  color: white;
+}
+
+.about-me-container{
+  width: 80%;
+  height: 60%;
+  margin-bottom: 5.5vmax;
+}
+
+.about-me-label{
+  font-size: 3vmax;
+  box-shadow: 2px 1px 2.5px black;
+  margin: 1vmin;
+  display: inline-block;
+  padding: 1vmin;
+  font-family: 'Muli', sans-serif;
+}
+
+.about-me-label:hover{
+  cursor: pointer;
+}
+
+.about-me-label:active{
+  transform: translate(2px, 2px);
+}
+
+.find-me-on{
+  font-size: 3vmax;
+  font-family: 'Paytone One', sans-serif;
+  display: inline-block;
+}
+
+.github-link:hover{
+  background-color: gray;
+  color: white;
+}
+
+.linkedin-link:hover{
+  background-color: #15bdfa;
+  color: white;
+}
+
+.resume-container{
+  font-family: 'Paytone One', sans-serif;
+  font-size: 3vmax;
+  margin-top: 10%;
+  display: block;
+}
+
+a.about-me-label{
+  color: black;
+  text-decoration: none;
+}
+
+.resume-link:hover{
+  color: white;
+  background-color: orangered;
 }

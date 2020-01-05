@@ -24,9 +24,6 @@ export default function MyProjects() {
   var projectCards = createProjectElements();
   return (
     <>
-    <div className = 'projects-page-title-container'>
-      <div className='projects-page-title'><i className="fas fa-cogs" style={{ lineHeight: '-200%', fontSize: '3rem', paddingRight: '2vw', color: 'white' }}></i>My Projects</div>
-    </div>
     <div className='project-card-container'>
       {projectCards}
     </div>
