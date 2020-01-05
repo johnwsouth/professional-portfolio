@@ -181,13 +181,13 @@ body{
   align-items: center;
   justify-content: center;
   height: 50vmax;
-  width: 80vmax;
+  width: 90vmax;
   padding-bottom: 10vh;
 }
 
 .project-card{
   height: 80%;
-  width: 28%;
+  width: 25vmax;
   margin: 2vw;
   background-color: white;
   box-shadow: 1px 1px 3px black;
@@ -216,13 +216,13 @@ body{
 
 .book-master{
   height: 13vmax;
-  margin-left: 5vw;
+  margin-left: 5.5vmax;
 }
 
 .ad-me{
   height: 6vmax;
-  margin-top: 5vmax;
-  margin-left: 3vmax;
+  margin-top: 2.5vmax;
+  margin-left: 4vmax;
 }
 
 .project-card-image-container{
@@ -273,11 +273,11 @@ body{
 .about-me-container{
   width: 80%;
   height: 60%;
-  margin-bottom: 5.5%;
+  margin-bottom: 5.5vmax;
 }
 
 .about-me-label{
-  font-size: 3rem;
+  font-size: 3vmax;
   box-shadow: 2px 1px 2.5px black;
   margin: 1vmin;
   display: inline-block;
@@ -294,7 +294,7 @@ body{
 }
 
 .find-me-on{
-  font-size: 3rem;
+  font-size: 3vmax;
   font-family: 'Paytone One', sans-serif;
   display: inline-block;
 }
@@ -311,7 +311,7 @@ body{
 
 .resume-container{
   font-family: 'Paytone One', sans-serif;
-  font-size: 3rem;
+  font-size: 3vmax;
   margin-top: 10%;
   display: block;
 }

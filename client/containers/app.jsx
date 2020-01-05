@@ -52,7 +52,7 @@ export default class App extends React.Component {
             </div>
           </div>
           <div className='page-3 page' name='page-2'>
-            <div className='about-me-title'>About Me</div>
+            <div className='about-me-title'><i style={{ fontSize: '4vmax', marginRight: '1vmax' }} className="fas fa-male"></i> About Me</div>
             <AboutMe/>
           </div>
 
