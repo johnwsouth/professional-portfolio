@@ -15,30 +15,34 @@ body{
   background-color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.landing-page-title-container{
+  margin-bottom: 10vmax;
 }
 
 .landing-page-title{
-  font-size: 3.7rem;
+  font-size: 3.8vmax;
   font-family: 'Paytone One', sans-serif;
+  text-shadow: 1px 1px 1px gray;
+  text-align: center;
+
 }
 
 .landing-page-subtitle{
   font-family: 'Arimo', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.9vmax;
   text-align: center;
   margin-top: 2vh;
+  text-shadow: 1px 1px 1px gray;
 }
 
-.landing-page-title-container{
-  align-self: center;
-  margin-bottom: 30vh;
-}
 
 .web-development-image{
+  height: 16vmax;
   position: absolute;
   bottom: 0;
-  justify-self: center;
-  left: 30vw;
 }
 
 .smiling-emoji-container{
@@ -50,7 +54,7 @@ body{
 }
 
 .smiling-emoji{
-  height: 15rem;
+  height: 16vmax;
   z-index: 3;
 }
 
@@ -63,9 +67,10 @@ body{
   margin-top: 3vh;
   background-color: #7510F7;
   border-radius: 50%;
-  height: 27vmin;
-  width: 27vmin;
+  height: 14vmax;
+  width: 14vmax;
   position: absolute;
+  box-shadow: 1px 1px 5px gray;
 
 }
 
@@ -78,7 +83,7 @@ body{
 }
 
 .projects-page-title{
-  font-size: 5rem;
+  font-size: 5vmax;
   font-family: 'Paytone One', sans-serif;
   color: white;
   text-align: center;
@@ -112,24 +117,26 @@ body{
 .vertical-page-nav-button{
   background-color: gray;
   height: 10%;
-  width: 3%;
+  width: 5%;
   margin-top: 1vh;
   margin-left: 1vw;
+  cursor: pointer
 }
 
 .vertical-page-nav-button:hover{
   background-color: black;
-  width: 4.33%;
-  cursor: pointer;
+  width: 8%;
+
 }
 
-.nav-container{
+.vertical-nav-container{
   display: inline-block;
   position: fixed;
   top: 30vh;
   left: 0;
   height: 40vh;
   width: 6%;
+  z-index: 3;
 }
 
 .vertical-page-nav-button-text{
@@ -144,11 +151,12 @@ body{
   position: fixed;
   display: flex;
   flex-direction: row;
-  height: 5vh;
-  width: 25vw;
+  height: 2.8vmax;
+  width: 25vmax;
   background-color: #7510F7;
   right: 0;
   font-size: 1.2rem;
+  box-shadow: -1px 1px 5px black;
 }
 
 .top-nav-button{
@@ -156,10 +164,11 @@ body{
   margin-top: 1vh;
   height: 50%;
   width: 33%;
-  font-size: 1.5rem;
+  font-size: 1.5vmax;
   color: white;
   border: none;
   text-align: center;
+  text-shadow: 1px 1px 2px black
 }
 
 .top-nav-button:hover{
@@ -171,8 +180,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80%;
-  width: 80%;
+  height: 50vmax;
+  width: 80vmax;
   padding-bottom: 10vh;
 }
 
@@ -191,7 +200,7 @@ body{
 }
 
 .project-card-title{
-  font-size: 2.3rem;
+  font-size: 2.3vmax;
   padding-top: 1vh;
   text-align: center;
 }
@@ -202,18 +211,18 @@ body{
   height: 10%;
 
   font-family: 'Muli', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.1vmax;
 }
 
 .book-master{
-  height: 13rem;
+  height: 13vmax;
   margin-left: 5vw;
 }
 
 .ad-me{
-  height: 7rem;
-  margin-top: 5vh;
-  margin-left: 2vw;
+  height: 6vmax;
+  margin-top: 5vmax;
+  margin-left: 3vmax;
 }
 
 .project-card-image-container{
@@ -223,18 +232,18 @@ body{
 .technologies-slab{
   display: flex;
   width: 100%;
-  margin-top: 2vh;
+  margin-top: 2%;
   justify-content: center;
 }
 
 .technologies-label{
-  font-size: 1.5rem;
+  font-size: 1.5vmax;
   margin: .5rem;
   font-family: 'Arimo', sans-serif;
 }
 
 .technologies-image{
-  height: 3rem;
+  height: 3vmax;
   margin-left: 1rem;
 }
 
@@ -244,8 +253,8 @@ body{
   color: white;
   box-shadow: .5px 1px 1px blanchedalmond;
   width: 100%;
-  font-size: 1.2rem;
-  padding: .5rem;
+  font-size: 1.2vmax;
+  padding: .5vmax;
   font-family: 'Muli', sans-serif;
 }
 
@@ -254,7 +263,7 @@ body{
 }
 
 .about-me-title{
-  font-size: 6rem;
+  font-size: 6vmax;
   position: absolute;
   top: 0;
   font-family: 'Paytone One', sans-serif;

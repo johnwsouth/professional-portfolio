@@ -12,27 +12,27 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentPage: 12
     };
+    this.onEnterViewport = this.onEnterViewport.bind(this);
+    this.onExitViewport = this.onExitViewport.bind(this);
+
+  }
+
+  onEnterViewport(pageNum) {
+    this.setState({
+      currentPage: pageNum
+    });
+  }
+
+  onExitViewport() {
+    this.setState({
+      currentPage: null
+    });
   }
 
   componentDidMount() {
     scrollSpy.update();
-  }
-
-  handleScroll(e) {
-    var element = e.target;
-    if (element.scrollHeight - element.scrollTop === element.clientHeight) {
-      // do something at end of scroll
-    }
-  }
-
-  scrollToSecondContainer() {
-    scroller.scrollTo('page-2', {
-      duration: 1500,
-      delay: 100,
-      smooth: true,
-      offset: 50 }
-    );
   }
 
   renderSelector() {
@@ -40,21 +40,21 @@ export default class App extends React.Component {
       <>
       <VerticalNav/>
       <TopNav/>
-        <div className='landing-page page' name='page-0'>
-          <LandingPage/>
-        </div>
-        <div className='page-2 page' name='page-1' >
-          <div className='projects-page-title-container'>
-            <div className='projects-page-title'><i className="fas fa-cogs" style={{ lineHeight: '-200%', fontSize: '3rem', paddingRight: '2vw', color: 'white' }}></i>My Projects</div>
+          <div className='landing-page page' name='page-0'>
+            <LandingPage/>
           </div>
-          <div className='page-2-projects'>
-            <MyProjects/>
+          <div className='page-2 page' name='page-1' >
+            <div className='projects-page-title-container'>
+              <div className='projects-page-title'><i className="fas fa-cogs" style={{ lineHeight: '-200%', fontSize: '3rem', paddingRight: '2vw', color: 'white' }}></i>My Projects</div>
+            </div>
+            <div className='page-2-projects'>
+              <MyProjects/>
+            </div>
           </div>
-        </div>
-        <div className='page-3 page' name='page-2'>
-          <div className='about-me-title'>About Me</div>
-          <AboutMe/>
-        </div>
+          <div className='page-3 page' name='page-2'>
+            <div className='about-me-title'>About Me</div>
+            <AboutMe/>
+          </div>
 
       </>
 
@@ -63,7 +63,7 @@ export default class App extends React.Component {
 
   render() {
     var appContext = {
-      something: this.something
+      currentPage: this.state.currentPage
     };
 
     var returnedComponents = this.renderSelector();
