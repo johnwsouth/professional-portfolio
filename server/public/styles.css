@@ -116,16 +116,16 @@ body{
 
 .vertical-page-nav-button{
   background-color: gray;
-  height: 10%;
-  width: 5%;
-  margin-top: 1vh;
-  margin-left: 1vw;
+  height: 2vmax;
+  width: .35vmax;
+  margin-top: 1vmax;
+  margin-left: 1vmax;
   cursor: pointer
 }
 
 .vertical-page-nav-button:hover{
   background-color: black;
-  width: 8%;
+  width: .5vmax;
 
 }
 
@@ -140,10 +140,11 @@ body{
 }
 
 .vertical-page-nav-button-text{
-  margin-left: 1vw;
-  color: indigo;
+  margin-left: 1vmax;
+  color: slategray;
   width: 100%;
-  line-height: 230%
+  line-height: 230%;
+  font-size: 1vmax;
 }
 
 .top-nav-container{
@@ -151,7 +152,7 @@ body{
   position: fixed;
   display: flex;
   flex-direction: row;
-  height: 2.8vmax;
+  height: 3vmax;
   width: 25vmax;
   background-color: #7510F7;
   right: 0;
