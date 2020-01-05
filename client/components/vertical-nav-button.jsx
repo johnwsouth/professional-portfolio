@@ -1,14 +1,21 @@
 import React from 'react';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'; // eslint-disable-line
+import AppContext from '../context';
 
 export default class VerticalNavButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isHovered: false
+      isHovered: false,
+      isCurrentPage: null
     };
     this.handleHover = this.handleHover.bind(this);
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount() {
+    var pageBool = this.context.currentPage === this.props.number;
+    this.setState({ isCurrentPage: pageBool });
   }
 
   handleHover() {
@@ -27,7 +34,7 @@ export default class VerticalNavButton extends React.Component {
     return (
       <div
         name={'vertical-nav-' + this.props.number}
-        className='vertical-page-nav-button'
+        className={`vertical-page-nav-button ${this.state.isCurrentPage === true ? 'vertical-page-nav-button-selected' : ''}`}
         onClick={this.handleClick}
         onMouseOver={this.handleHover}
         onMouseLeave={this.handleHover}>
@@ -39,3 +46,5 @@ export default class VerticalNavButton extends React.Component {
     );
   }
 }
+
+VerticalNavButton.contextType = AppContext;
