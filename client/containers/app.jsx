@@ -13,11 +13,26 @@ export default class App extends React.Component {
     super(props);
     this.state = {
     };
-    this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
     scrollSpy.update();
+  }
+
+  handleScroll(e) {
+    var element = e.target;
+    if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+      // do something at end of scroll
+    }
+  }
+
+  scrollToSecondContainer() {
+    scroller.scrollTo('page-2', {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 50 }
+    );
   }
 
   renderSelector() {
@@ -25,7 +40,7 @@ export default class App extends React.Component {
       <>
       <VerticalNav/>
       <TopNav/>
-        <div className='landing-page page' onScroll={this.handleScroll} name='page-0'>
+        <div className='landing-page page' name='page-0'>
           <LandingPage/>
         </div>
         <div className='page-2 page' name='page-1' >
