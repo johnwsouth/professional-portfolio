@@ -19,7 +19,7 @@ export default class AboutMe extends React.Component {
           <i className="fab fa-linkedin"></i> LinkedIn
         </a>
         <div className='resume-container'> Extra Info: <br></br>
-          <a className='about-me-label resume-link' href="./resume.pdf" target='__blank'>
+          <a className='about-me-label resume-link' href="./Resume-Updated.pdf" target='__blank'>
             <div className=''><i className="far fa-file-alt"></i> Resume</div>
           </a>
         </div>
