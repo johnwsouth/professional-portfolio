@@ -7,7 +7,9 @@ export default class LandingPage extends React.Component {
       <>
       <div className='landing-page-title-container'>
         <div className='landing-page-title'><i className="fas fa-code code-icon"></i> Full Stack Developer, Designer
-          <div className='landing-page-subtitle'> Simple code, beautiful applications </div>
+          <div className='landing-page-subtitle'> Simple code, beautiful applications
+            <div className='landing-page-contact'>phone: (714) 328 - 5441 <br/>
+            email: im.john.south@gmail.com</div></div>
         </div>
         <div className='smiling-emoji-container'>
           <img className='smiling-emoji' src="./images/emonji-smile-2.png" alt="no face" />
